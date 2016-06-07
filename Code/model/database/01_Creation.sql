@@ -141,7 +141,7 @@ CREATE TABLE Article
   description varchar(255),
   prix float(53),
   image varchar(255),
-  CONSTRAINT pk_Article PRIMARY KEY (libelle),
+  CONSTRAINT pk_Article PRIMARY KEY (libelle,description),
   CONSTRAINT fk_Gamme FOREIGN KEY (gamme)
   REFERENCES Gamme(libelle)
 );
