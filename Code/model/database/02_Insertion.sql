@@ -38,59 +38,6 @@ INSERT INTO Telephone (numero, entreprise)
 VALUES ('04 67 56 23 94','L\'autre Sud');
 SELECT * FROM Telephone;
 
-
-/*
-Formule
-*/
-INSERT INTO Formule
-VALUES
-SELECT * FROM Formule;
-
-/*
-Type
-*/
-INSERT INTO Type
-VALUES
-SELECT * FROM Type;
-
-/*
-Ligne_formule
-*/
-INSERT INTO Ligne_formule
-VALUES
-SELECT * FROM Ligne_formule;
-
-/*
-Element_carte
-*/
-INSERT INTO Element_carte
-VALUES
-SELECT * FROM Element_carte;
-
-/*
-Categorie
-*/
-INSERT INTO Catégorie
-VALUES
-SELECT * FROM Categorie;
-
-/*
-Patisserie
-*/
-INSERT INTO Patisserie
-VALUES
-SELECT * FROM Patisserie;
-
-/*
-Gamme
-*/
-INSERT INTO Gamme
-VALUES
-SELECT * FROM Gamme;
-
-/*
-Article
-*/
-INSERT INTO Article
-VALUES
-SELECT * FROM Article;
+source 02_Insertion_Epicerie.sql;
+source 02_Insertion_Patisserie.sql
+source 02_Insertion_Restaurant.sql
