@@ -60,16 +60,6 @@ CREATE TABLE Formule
 select "Formule";
 DESC Formule;
 
-CREATE TABLE Type
-(
-  libelle varchar(255),
-  description varchar(255),
-  image varchar(255),
-  CONSTRAINT pk_Type PRIMARY KEY (libelle)
-);
-select "Type";
-DESC Type;
-
 CREATE TABLE Ligne_formule
 (
   formule varchar(255),
@@ -84,6 +74,16 @@ CREATE TABLE Ligne_formule
 );
 select "Ligne_formule";
 DESC Ligne_formule;
+
+CREATE TABLE Type
+(
+  libelle varchar(255),
+  description varchar(255),
+  image varchar(255),
+  CONSTRAINT pk_Type PRIMARY KEY (libelle)
+);
+select "Type";
+DESC Type;
 
 CREATE TABLE Element_carte
 (
