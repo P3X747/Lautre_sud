@@ -49,6 +49,31 @@ CREATE TABLE Telephone
 select "Telephone";
 DESC Telephone;
 -- Tables concernant le restaurant
+
+CREATE TABLE Type
+(
+  libelle varchar(255),
+  description varchar(255),
+  image varchar(255),
+  CONSTRAINT pk_Type PRIMARY KEY (libelle)
+);
+select "Type";
+DESC Type;
+
+CREATE TABLE Element_carte
+(
+  type varchar(255),
+  libelle varchar(255),
+  description varchar(255),
+  prix float(53),
+  image varchar(255),
+  CONSTRAINT pk_Element_carte PRIMARY KEY (libelle),
+  CONSTRAINT fk_Type_Element_carte FOREIGN KEY (type)
+  REFERENCES Type(libelle)
+);
+select "Element_carte";
+DESC Element_carte;
+
 CREATE TABLE Formule
 (
   libelle varchar(255),
@@ -75,29 +100,6 @@ CREATE TABLE Ligne_formule
 select "Ligne_formule";
 DESC Ligne_formule;
 
-CREATE TABLE Type
-(
-  libelle varchar(255),
-  description varchar(255),
-  image varchar(255),
-  CONSTRAINT pk_Type PRIMARY KEY (libelle)
-);
-select "Type";
-DESC Type;
-
-CREATE TABLE Element_carte
-(
-  type varchar(255),
-  libelle varchar(255),
-  description varchar(255),
-  prix float(53),
-  image varchar(255),
-  CONSTRAINT pk_Element_carte PRIMARY KEY (libelle),
-  CONSTRAINT fk_Type_Element_carte FOREIGN KEY (type)
-  REFERENCES Type(libelle)
-);
-select "Element_carte";
-DESC Element_carte;
 
 -- Tables concernant la patisserie
 CREATE TABLE Categorie
