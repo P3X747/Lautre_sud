@@ -29,7 +29,6 @@ VALUES ("Aubergines farcies (Cheikh el mehché):","Aubergines grillées au four 
 
 SELECT * FROM Element_carte;
 
-
 /* Entrées */
 INSERT INTO Element_carte (libelle, description, prix)
 VALUES ("Taboulé libanais","Persil, tomate, oignon, bulgur, citron, huile d'olive.",4.50);

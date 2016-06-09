@@ -67,7 +67,7 @@ CREATE TABLE Element_carte
   description varchar(255),
   prix float(53),
   image varchar(255),
-  CONSTRAINT pk_Element_carte PRIMARY KEY (libelle),
+  CONSTRAINT pk_Element_carte PRIMARY KEY (libelle, description),
   CONSTRAINT fk_Type_Element_carte FOREIGN KEY (type)
   REFERENCES Type(libelle)
 );
@@ -81,6 +81,7 @@ CREATE TABLE Formule
   prix float(53),
   image varchar(255),
   CONSTRAINT pk_Formule PRIMARY KEY (libelle)
+
 );
 select "Formule";
 DESC Formule;
