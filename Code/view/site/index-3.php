@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Menu</title>
@@ -17,12 +17,12 @@
         <a href="http://windows.microsoft.com/en-US/internet-explorer/..">
             <img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820"
                  alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/>
-        </a> 
+        </a>
     </div>
     <script src="js/html5shiv.js"></script>
     <![endif]-->
- 
-    <script src='js/device.min.js'></script> 
+
+    <script src='js/device.min.js'></script>
 </head>
 
 <body>
@@ -93,6 +93,158 @@
         <section class="well well__offset-3">
             <div class="container">
                 <h2><em>Our</em>Menu</h2>
+                <?php
+          			function getAllCours()
+          			{
+          				//Enregistrement de la requête
+          				//Variable permettant d'enregiter la connection
+          				$conn;
+          				//Récupération de la configuration de la base de données
+          				define('DB_USERNAME', 'root');
+          				define('DB_PASSWORD', 'password');
+          				define('DB_HOST', '127.0.0.1');
+          				define('DB_NAME', 'db_3muc');
+
+          				// Connection à la base de données mysql
+          				$conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+
+          				// Traitement du cas d'erreur de la fonction de connecion
+          				if (mysqli_connect_errno()) {
+          					echo "Failed to connect to MySQL: " . mysqli_connect_error();
+          				}
+
+          				// Enregistrement de la requete
+          				$stmt = $conn->prepare("SELECT *
+          					FROM Cours C,Jour J
+          					WHERE C.jour = J.nom
+          					ORDER BY piscine,J.id,heuredeb");
+          					//Exécution de la requete
+          					$stmt->execute();
+          					//Récupération du résultat dans la variable resultat
+          					$resultat = $stmt->get_result();
+          					//Fermeture de la connection avec la base de données MySql
+          					$stmt->close();
+          					//Retour de la variable resultat
+          					return $resultat;
+          				}
+
+          				function affichage_liste_Cours()
+          				{
+          					//Appel de la fonction getAllCours()
+          					//Enregistrement du résultat dans la variable $rsltCours
+          					$rsltCours = getAllCours();
+          					//Si il y a au moins une ligne
+          					if ($rsltCours->num_rows > 0) {
+          						//Variable $ligne_num enregistre le numero de la ligne à afficher
+          						$ligne_num = 0;
+          						//Variable $piscine_previous mémorise le nom de la piscine de la ligne précédente
+          						$piscine_previous = "";
+          						//Variable $jour_previous mémorise le nom du jour de la ligne précédente
+          						$jour_previous = "";
+          						//Variable $color_NOMPISCINE memorise les couleurs associés à la piscine NOMPISCINE
+          						//la première couleur est pour les lignes paires $ligne_num%2==0
+          						//la deuxième couleur est pour les lignes impaires $ligne_num%2!=0
+          						$color_AMPHITRITE = array("#004a99","#1684d6");
+          						$color_CARON =  array("#ec7a08","#f7be81");
+          						$color_PITOT =  array("#02b50d","#9ff781");
+          						$color_VIVES =  array("#6d3e90","#da81f5");
+          						//La fonction fetch_assoc() permet de lire ligne par ligne le résultat de la requete sql
+          						while($row = $rsltCours->fetch_assoc())
+          						{
+          							//Si le nom de la piscine de la ligne courante est différent de celui de la ligne précédente
+          							//On réinitialise $ligne_num afin de commencé toujours par la même nuance de couleur
+          							if (strcasecmp($row["piscine"], $piscine_previous) > 0)
+          							{
+          								$ligne_num=0;
+          							}
+          							//Si le nom de la piscine de la ligne est NOMPISCINE
+          							//Alors on enregistre dans la variable $color = $color_NOMPISCINE
+          							if (strcasecmp($row["piscine"], "AMPHITRITE") == 0)
+          							{
+          								$color = $color_AMPHITRITE;
+          							}
+          							elseif (strcasecmp($row["piscine"], "PITOT") == 0)
+          							{
+          								$color = $color_PITOT;
+          							}
+          							elseif (strcasecmp($row["piscine"], "CARON") == 0)
+          							{
+          								$color = $color_CARON;
+          							}
+          							elseif (strcasecmp($row["piscine"], "VIVES") == 0)
+          							{
+          								$color = $color_VIVES;
+          							}
+          							//Appel de la fonction affichage_ligne_Cour pour afficher la ligne au format html
+          							affichage_ligne_Cour($ligne_num,$row["piscine"],$piscine_previous
+          							,$row["jour"],$jour_previous,$row["heuredeb"],$row["activite"],$color);
+          							//Mises à jours de la variable $jour_previous
+          							$jour_previous = $row["jour"];
+          							//Mises à jours de la variable $piscine_previous
+          							$piscine_previous = $row["piscine"];
+          							//Mises à jours de la variable $ligne_num
+          							$ligne_num =  $ligne_num + 1;
+          						}
+          					}
+          					else
+          					{
+          						echo "0 results";
+          					}
+          				}
+
+          				function affichage_ligne_Cour($ligne_num,$piscine,$piscine_previous,$jour,$jour_previous,$heuredeb,$activite,$color)
+          				{
+          					//Si c'est la première ligne
+          					//On affiche le nom de la piscine
+          					if($ligne_num==0)
+          					{
+          						echo"<table class=\"mceItemTable\">";
+          						echo"<tbody>";
+          						echo "<tr class=\"row-1 odd\">";
+          						echo "<td class=\"column-1\" colspan=\"5\"><strong><span style=\"color: #004a99;\">PISCINE ".$piscine."</span></strong></td>";
+          						echo "</tr>";
+          						echo "<br>";
+          					}
+          					//On ouvre un division pour la ligne à afficher
+          					echo "<tr class=\"row-".$ligne_num." even\">";
+          					//Si le jour de la ligne à afficher est différent de celui de la ligne précédente
+          					//Alors on affiche le le nom du jour
+          					if(strcasecmp($jour,$jour_previous)!=0 || strcasecmp($piscine,$piscine_previous)!==0)
+          					{
+          						echo "<td class=\"columm 1\" dir=\"\" lang=\"\" style=\"text-align: center; background-color:".$color[$ligne_num%2].
+          						";\" colspan=\"1\" rowspan=\"1\" scope=\"\" valign=\"\">".$jour."</td>";
+          					}
+          					//Sinon on affiche un case vide
+          					else
+          					{
+          						echo "<td class=\"columm 1\" dir=\"\" lang=\"\" style=\"text-align: center; background-color:".$color[$ligne_num%2].
+          						";\" colspan=\"1\" rowspan=\"1\" scope=\"\" valign=\"\">"." "."</td>";
+          					}
+          					//On ajoute la case heuredeb
+          					echo "<td dir=\"\" lang=\"\" style=\"text-align: center; background-color: ".$color[$ligne_num%2].
+          					";\" scope=\"\" align=\"\" valign=\"\">".$heuredeb."</td>";
+          					//On ajoute les cases activités
+          					echo "<td dir=\"\" lang=\"\" style=\"text-align: center; background-color: ".$color[$ligne_num%2].
+          					";\" colspan=\"3\" rowspan=\"1\" scope=\"\" align=\"\" valign=\"\">";
+
+          					//explode(",","DEButants,Primo,Niveau 1,Niveau 2,Niveau 3,Niveau 4, Adultes Perfectionnement / Sport ")
+          					// ==> array("DEButants","Primo","Niveau 1","Niveau 2","Niveau 3","Niveau 4","Adultes Perfectionnement / Sport ")
+          					//@explode : http://stackoverflow.com/questions/10037757/split-a-string-into-two-variables-by-separator
+          					$array_activite = explode(",", $activite);
+
+          					//string implode ($separator,$array_name)
+          					//implode(" ---- ",array("DEButants","Primo","Niveau 1","Niveau 2","Niveau 3","Niveau 4","Adultes Perfectionnement / Sport "))
+          					// ==> "DEButants ---- Primo ---- Niveau 1 ---- Niveau 2 ---- Niveau 3 ---- Niveau 4 ---- Adultes Perfectionnement / Sport "
+          					//@implode : http://www.tutorialscollection.com/php-array-to-string-how-to-convert-an-array-to-string-in-php/
+          					$separator = "<td dir=\"\" lang=\"\" style=\"text-align: center; background-color: ".$color[$ligne_num%2].
+          					";\" colspan=\"3\" rowspan=\"1\" scope=\"\" align=\"\" valign=\"\">";
+          					echo implode($separator,$array_activite)."</td>";
+          					echo "</tr>";
+          					echo "</tr>";
+          				}
+          				//appel de la fonction affichage_liste_Cours()
+          				affichage_liste_Cours();
+          				?>
                 <div class="row box-2">
                     <div class="grid_4">
                         <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="images/page-4_img01.jpg" alt=""></div></div>
