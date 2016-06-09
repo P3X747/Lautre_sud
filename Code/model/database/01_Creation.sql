@@ -64,7 +64,7 @@ CREATE TABLE Element_carte
 (
   type varchar(255),
   libelle varchar(255),
-  description varchar(255),
+  description varchar(255) DEFAULT '--',
   prix float(53),
   image varchar(255),
   CONSTRAINT pk_Element_carte PRIMARY KEY (libelle, description),

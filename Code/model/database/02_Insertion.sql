@@ -39,5 +39,5 @@ VALUES ("04 67 56 23 94","L'autre Sud");
 SELECT * FROM Telephone;
 
 source 02_Insertion_Epicerie.sql;
-source 02_Insertion_Patisserie.sql
-source 02_Insertion_Restaurant.sql
+source 02_Insertion_Patisserie.sql;
+source 02_Insertion_Restaurant.sql;
