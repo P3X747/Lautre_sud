@@ -6,7 +6,7 @@ description varchar(255),
 INSERT INTO Type
 (libelle)
 VALUES
-("Entrée")
+("Entree")
 ;
 INSERT INTO Type
 (libelle)
