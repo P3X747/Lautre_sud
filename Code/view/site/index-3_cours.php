@@ -92,7 +92,7 @@
     <main>
         <section class="well well__offset-3">
             <div class="container">
-                <h2><em>Our</em>Menu</h2>
+                <h2><em>L'autre Sud</em>Menu</h2>
                 <?php
           			function getAllCours()
           			{

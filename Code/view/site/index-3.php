@@ -92,7 +92,7 @@
     <main>
         <section class="well well__offset-3">
             <div class="container">
-                <h2><em>Our</em>Menu</h2>
+                <h2><em>L'autre Sud</em>Menu</h2>
                 <?php
           			function getAllCours()
           			{
@@ -101,7 +101,8 @@
           				$conn;
           				//Récupération de la configuration de la base de données
           				define('DB_USERNAME', 'root');
-          				define('DB_PASSWORD', 'gazlot');
+          			 //define('DB_PASSWORD', 'gazlot');
+                  define('DB_PASSWORD', 'password');
           				define('DB_HOST', '127.0.0.1');
           				define('DB_NAME', 'db_lautre_sud');
 
@@ -115,7 +116,7 @@
 
           				// Enregistrement de la requete
           				$stmt = $conn->prepare("SELECT *
-          					FROM Type");
+          					FROM Element_carte");
           					//Exécution de la requete
           					$stmt->execute();
           					//Récupération du résultat dans la variable resultat
@@ -133,15 +134,15 @@
           					$rsltCours = getAllCours();
           					//Si il y a au moins une ligne
           					if ($rsltCours->num_rows > 0) {
-          						//Variable $ligne_num enregistre le numero de la ligne à afficher
-          						$ligne_num = 0;
+          						//Variable $i enregistre le numero de la ligne à afficher
+          						$i = 0;
           						//Variable $piscine_previous mémorise le nom de la piscine de la ligne précédente
           						$piscine_previous = "";
           						//Variable $jour_previous mémorise le nom du jour de la ligne précédente
           						$jour_previous = "";
           						//Variable $color_NOMPISCINE memorise les couleurs associés à la piscine NOMPISCINE
-          						//la première couleur est pour les lignes paires $ligne_num%2==0
-          						//la deuxième couleur est pour les lignes impaires $ligne_num%2!=0
+          						//la première couleur est pour les lignes paires $i%2==0
+          						//la deuxième couleur est pour les lignes impaires $i%2!=0
           						$color_AMPHITRITE = array("#004a99","#1684d6");
           						$color_CARON =  array("#ec7a08","#f7be81");
           						$color_PITOT =  array("#02b50d","#9ff781");
@@ -150,11 +151,11 @@
           						while($row = $rsltCours->fetch_assoc())
           						{
           							//Si le nom de la piscine de la ligne courante est différent de celui de la ligne précédente
-          							//On réinitialise $ligne_num afin de commencé toujours par la même nuance de couleur
+          							//On réinitialise $i afin de commencé toujours par la même nuance de couleur
                         /*
           							if (strcasecmp($row["piscine"], $piscine_previous) > 0)
           							{
-          								$ligne_num=0;
+          								$i=0;
           							}
           							//Si le nom de la piscine de la ligne est NOMPISCINE
           							//Alors on enregistre dans la variable $color = $color_NOMPISCINE
@@ -176,15 +177,15 @@
           							}
                         */
           							//Appel de la fonction affichage_ligne_Cour pour afficher la ligne au format html
-                        echo "libelle".$ligne_num,$row["libelle"];
-          					//		affichage_ligne_Type($ligne_num,$row["libelle"],$piscine_previous
+                      //  echo "libelle".$i,$row["libelle"];
+          							affichage_ligne_Type($i,$row["libelle"],$row["description"],$row["prix"]);
           						//	,$row["description"]);
           							//Mises à jours de la variable $jour_previous
           						//	$jour_previous = $row["jour"];
           							//Mises à jours de la variable $piscine_previous
 //$piscine_previous = $row["piscine"];
-          							//Mises à jours de la variable $ligne_num
-          							$ligne_num =  $ligne_num + 1;
+          							//Mises à jours de la variable $i
+          							$i =  $i + 1;
           						}
           					}
           					else
@@ -193,55 +194,23 @@
           					}
           				}
 
-          				function affichage_ligne_Cour($ligne_num,$piscine,$piscine_previous,$jour,$jour_previous,$heuredeb,$activite,$color)
+          				function affichage_ligne_Type($i,$libelle,$description,$prix)
           				{
-          					//Si c'est la première ligne
-          					//On affiche le nom de la piscine
-          					if($ligne_num==0)
-          					{
-          						echo"<table class=\"mceItemTable\">";
-          						echo"<tbody>";
-          						echo "<tr class=\"row-1 odd\">";
-          						echo "<td class=\"column-1\" colspan=\"5\"><strong><span style=\"color: #004a99;\">PISCINE ".$piscine."</span></strong></td>";
-          						echo "</tr>";
-          						echo "<br>";
-          					}
-          					//On ouvre un division pour la ligne à afficher
-          					echo "<tr class=\"row-".$ligne_num." even\">";
-          					//Si le jour de la ligne à afficher est différent de celui de la ligne précédente
-          					//Alors on affiche le le nom du jour
-          					if(strcasecmp($jour,$jour_previous)!=0 || strcasecmp($piscine,$piscine_previous)!==0)
-          					{
-          						echo "<td class=\"columm 1\" dir=\"\" lang=\"\" style=\"text-align: center; background-color:".$color[$ligne_num%2].
-          						";\" colspan=\"1\" rowspan=\"1\" scope=\"\" valign=\"\">".$jour."</td>";
-          					}
-          					//Sinon on affiche un case vide
-          					else
-          					{
-          						echo "<td class=\"columm 1\" dir=\"\" lang=\"\" style=\"text-align: center; background-color:".$color[$ligne_num%2].
-          						";\" colspan=\"1\" rowspan=\"1\" scope=\"\" valign=\"\">"." "."</td>";
-          					}
-          					//On ajoute la case heuredeb
-          					echo "<td dir=\"\" lang=\"\" style=\"text-align: center; background-color: ".$color[$ligne_num%2].
-          					";\" scope=\"\" align=\"\" valign=\"\">".$heuredeb."</td>";
-          					//On ajoute les cases activités
-          					echo "<td dir=\"\" lang=\"\" style=\"text-align: center; background-color: ".$color[$ligne_num%2].
-          					";\" colspan=\"3\" rowspan=\"1\" scope=\"\" align=\"\" valign=\"\">";
-
-          					//explode(",","DEButants,Primo,Niveau 1,Niveau 2,Niveau 3,Niveau 4, Adultes Perfectionnement / Sport ")
-          					// ==> array("DEButants","Primo","Niveau 1","Niveau 2","Niveau 3","Niveau 4","Adultes Perfectionnement / Sport ")
-          					//@explode : http://stackoverflow.com/questions/10037757/split-a-string-into-two-variables-by-separator
-          					$array_activite = explode(",", $activite);
-
-          					//string implode ($separator,$array_name)
-          					//implode(" ---- ",array("DEButants","Primo","Niveau 1","Niveau 2","Niveau 3","Niveau 4","Adultes Perfectionnement / Sport "))
-          					// ==> "DEButants ---- Primo ---- Niveau 1 ---- Niveau 2 ---- Niveau 3 ---- Niveau 4 ---- Adultes Perfectionnement / Sport "
-          					//@implode : http://www.tutorialscollection.com/php-array-to-string-how-to-convert-an-array-to-string-in-php/
-          					$separator = "<td dir=\"\" lang=\"\" style=\"text-align: center; background-color: ".$color[$ligne_num%2].
-          					";\" colspan=\"3\" rowspan=\"1\" scope=\"\" align=\"\" valign=\"\">";
-          					echo implode($separator,$array_activite)."</td>";
-          					echo "</tr>";
-          					echo "</tr>";
+                    if ($i%3==0)
+                    {
+                      echo '<div class="row box-2">';
+                    }
+                      echo '<div class="grid_4">
+                          <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="images/page-4_img0'.($i%9+1).'.jpg" alt=""></div></div>
+                          <h3>'.$libelle.'</h3>
+                          <p>'.$description.'</p>
+                          <h3>'.$prix.' euros </h3>
+                          <a href="#" class="btn">Read more</a>
+                      </div>';
+                      if ($i%3==2)
+                      {
+                        echo '</div>';
+                      }
           				}
           				//appel de la fonction affichage_liste_Cours()
           				affichage_liste_Cours();
