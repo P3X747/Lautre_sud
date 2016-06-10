@@ -101,9 +101,9 @@
           				$conn;
           				//Récupération de la configuration de la base de données
           				define('DB_USERNAME', 'root');
-          				define('DB_PASSWORD', 'password');
+          				define('DB_PASSWORD', 'gazlot');
           				define('DB_HOST', '127.0.0.1');
-          				define('DB_NAME', 'db_3muc');
+          				define('DB_NAME', 'db_lautre_sud');
 
           				// Connection à la base de données mysql
           				$conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
@@ -115,9 +115,7 @@
 
           				// Enregistrement de la requete
           				$stmt = $conn->prepare("SELECT *
-          					FROM Cours C,Jour J
-          					WHERE C.jour = J.nom
-          					ORDER BY piscine,J.id,heuredeb");
+          					FROM Type");
           					//Exécution de la requete
           					$stmt->execute();
           					//Récupération du résultat dans la variable resultat
@@ -153,6 +151,7 @@
           						{
           							//Si le nom de la piscine de la ligne courante est différent de celui de la ligne précédente
           							//On réinitialise $ligne_num afin de commencé toujours par la même nuance de couleur
+                        /*
           							if (strcasecmp($row["piscine"], $piscine_previous) > 0)
           							{
           								$ligne_num=0;
@@ -175,13 +174,15 @@
           							{
           								$color = $color_VIVES;
           							}
+                        */
           							//Appel de la fonction affichage_ligne_Cour pour afficher la ligne au format html
-          							affichage_ligne_Cour($ligne_num,$row["piscine"],$piscine_previous
-          							,$row["jour"],$jour_previous,$row["heuredeb"],$row["activite"],$color);
+                        echo "libelle".$ligne_num,$row["libelle"];
+          					//		affichage_ligne_Type($ligne_num,$row["libelle"],$piscine_previous
+          						//	,$row["description"]);
           							//Mises à jours de la variable $jour_previous
-          							$jour_previous = $row["jour"];
+          						//	$jour_previous = $row["jour"];
           							//Mises à jours de la variable $piscine_previous
-          							$piscine_previous = $row["piscine"];
+//$piscine_previous = $row["piscine"];
           							//Mises à jours de la variable $ligne_num
           							$ligne_num =  $ligne_num + 1;
           						}
