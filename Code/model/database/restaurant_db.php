@@ -1,29 +1,21 @@
 <?php
+require_once('abstract_db.php');
 class Restaurant_db extends  Abstract_db
 {
 
-  function getAllCours()
+  function __construct() {
+    //Importation de DbConnect
+    require_once dirname(__FILE__) . '\db_Connect.php';
+    //Instanciation de DbConnect dans la variable db
+    $db = new Db_Connect();
+    //Ouverture de la connection avec la base de données mysql
+    $this->conn = $db->connect();
+  }
+
+  public function getAllCours()
   {
-    //Enregistrement de la requête
-    //Variable permettant d'enregiter la connection
-    $conn;
-    //Récupération de la configuration de la base de données
-    define('DB_USERNAME', 'root');
-   //define('DB_PASSWORD', 'gazlot');
-    define('DB_PASSWORD', 'password');
-    define('DB_HOST', '127.0.0.1');
-    define('DB_NAME', 'db_lautre_sud');
-
-    // Connection à la base de données mysql
-    $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
-
-    // Traitement du cas d'erreur de la fonction de connecion
-    if (mysqli_connect_errno()) {
-      echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    }
-
     // Enregistrement de la requete
-    $stmt = $conn->prepare("SELECT *
+    $stmt = $this->conn->prepare("SELECT *
       FROM Element_carte");
       //Exécution de la requete
       $stmt->execute();
@@ -35,11 +27,11 @@ class Restaurant_db extends  Abstract_db
       return $resultat;
     }
 
-    function affichage_liste_Cours()
+    public function affichage_liste_Cours()
     {
       //Appel de la fonction getAllCours()
       //Enregistrement du résultat dans la variable $rsltCours
-      $rsltCours = getAllCours();
+      $rsltCours = $this->getAllCours();
       //Si il y a au moins une ligne
       if ($rsltCours->num_rows > 0) {
         //Variable $i enregistre le numero de la ligne à afficher
@@ -86,7 +78,7 @@ class Restaurant_db extends  Abstract_db
           */
           //Appel de la fonction affichage_ligne_Cour pour afficher la ligne au format html
         //  echo "libelle".$i,$row["libelle"];
-          affichage_ligne_Type($i,$row["libelle"],$row["description"],$row["prix"]);
+          $this->affichage_ligne_Type($i,$row["libelle"],$row["description"],$row["prix"]);
         //	,$row["description"]);
           //Mises à jours de la variable $jour_previous
         //	$jour_previous = $row["jour"];
@@ -102,7 +94,7 @@ class Restaurant_db extends  Abstract_db
       }
     }
 
-    function affichage_ligne_Type($i,$libelle,$description,$prix)
+    public function affichage_ligne_Type($i,$libelle,$description,$prix)
     {
       if ($i%3==0)
       {
