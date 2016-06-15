@@ -94,9 +94,14 @@
             <div class="container">
                 <h2><em>L'autre Sud</em>Menu</h2>
                 <?php
+                /*
           				require_once("../../model/database/restaurant_db.php");
           				$coursModel = new Restaurant_db();
           				$coursModel->affichage_liste_Cours();
+                  */
+                  require_once("../restaurant_view.php");
+          				$restaurant_view = new Restaurant_view();
+          				$restaurant_view->display_list_ElementCarte();
           				?>
                 <div class="row box-2">
                     <div class="grid_4">
