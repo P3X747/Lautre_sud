@@ -101,6 +101,8 @@
                   */
                   require_once("../restaurant_view.php");
           				$restaurant_view = new Restaurant_view();
+                  $restaurant_view->display_list_Type();
+
           				$restaurant_view->display_list_ElementCarte();
           				?>
                 <div class="row box-2">
