@@ -3,16 +3,7 @@ require_once('abstract_db.php');
 class Restaurant_db extends  Abstract_db
 {
 
-  function __construct() {
-    //Importation de DbConnect
-    require_once dirname(__FILE__) . '\db_Connect.php';
-    //Instanciation de DbConnect dans la variable db
-    $db = new Db_Connect();
-    //Ouverture de la connection avec la base de données mysql
-    $this->conn = $db->connect();
-  }
-
-  public function getAllCours()
+  public function getAllElementCarte()
   {
     // Enregistrement de la requete
     $stmt = $this->conn->prepare("SELECT *
@@ -29,9 +20,9 @@ class Restaurant_db extends  Abstract_db
 
     public function affichage_liste_Cours()
     {
-      //Appel de la fonction getAllCours()
+      //Appel de la fonction getAllElementCarte()
       //Enregistrement du résultat dans la variable $rsltCours
-      $rsltCours = $this->getAllCours();
+      $rsltCours = $this->getAllElementCarte();
       //Si il y a au moins une ligne
       if ($rsltCours->num_rows > 0) {
         //Variable $i enregistre le numero de la ligne à afficher
