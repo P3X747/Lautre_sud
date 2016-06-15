@@ -101,70 +101,13 @@
                   */
                   require_once("../restaurant_view.php");
           				$restaurant_view = new Restaurant_view();
+                  echo "<h2><em>Types</em></h2>";
                   $restaurant_view->display_list_Type();
+                  echo "<h2><em>Formules</em></h2>";
                   $restaurant_view->display_list_Formule();
+                  echo "<h2><em>Carte</em></h2>";
           				$restaurant_view->display_list_ElementCarte();
           				?>
-                <div class="row box-2">
-                    <div class="grid_4">
-                        <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="images/page-4_img01.jpg" alt=""></div></div>
-                        <h3>Anteger convallis orci vel mi nelaoreet, at ornare lorem consequat. </h3>
-                        <p>Vestibulum volutpatturpis ut massa commodo, quis aliquam massa facilisis.Integer convavel miberto merlonelaoreet, at ornare lorem consequat.</p>
-                        <a href="#" class="btn">Read more</a>
-                    </div>
-                    <div class="grid_4">
-                        <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="images/page-4_img02.jpg" alt=""></div></div>
-                        <h3>Genteger convallis orci vel mi nelaoreet, at ornare lorem consequat.</h3>
-                        <p>Meestibulum volutpatturpis ut massa commodo, quis aliquam massa facilisis.Integer convavel miberto merlonelaoreet, at ornare lorem consequatre. </p>
-                        <a href="#" class="btn">Read more</a>
-                    </div>
-                    <div class="grid_4">
-                        <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="images/page-4_img03.jpg" alt=""></div></div>
-                        <h3>Ternteger convallis orci vel mi nelaoreet, at ornare lorem consequat. </h3>
-                        <p>Testibulum volutpatturpis ut massa commodo, quis aliquam massa facilisis.Integer convavel miberto merlonelaoreet, at ornare lorem consequ.</p>
-                        <a href="#" class="btn">Read more</a>
-                    </div>
-                </div>
-                <div class="row box-2">
-                    <div class="grid_4">
-                        <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="images/page-4_img04.jpg" alt=""></div></div>
-                        <h3>Onteger convallis orci vel mi nelaoreet, at ornare lorem consequate. </h3>
-                        <p>Testibulum volutpatturpis ut massa commodo, quis aliquam massa facilisis.Integer convavel miberto merlonelaoreet, at ornare lorem consequa.</p>
-                        <a href="#" class="btn">Read more</a>
-                    </div>
-                    <div class="grid_4">
-                        <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="images/page-4_img05.jpg" alt=""></div></div>
-                        <h3>Fenteger convallis orci vel mi nelaoreet, at ornare lorem consequat. </h3>
-                        <p>Vestibulum volutp turpis ut massa commodo, quis aliquam massa facilisis.Vestibulum volutpat turpis ut massa commodo, quis aliquam massa facilisis.</p>
-                        <a href="#" class="btn">Read more</a>
-                    </div>
-                    <div class="grid_4">
-                        <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="images/page-4_img06.jpg" alt=""></div></div>
-                        <h3>Dernteger convallis orci vel mi nelaoreet, at ornare lorem consequat. </h3>
-                        <p>Testibulum volutpatturpis ut massa commodo, quis aliquam massa facilisis.Integer convavel miberto merlonelaoreet, at ornare lorem conseasellus era nisl. </p>
-                        <a href="#" class="btn">Read more</a>
-                    </div>
-                </div>
-                <div class="row box-2">
-                    <div class="grid_4">
-                        <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="images/page-4_img07.jpg" alt=""></div></div>
-                        <h3>Anteger convallis orci vel mi nelaoreet, at ornare lorem consequat. </h3>
-                        <p>Vestibulum volutpatturpis ut massa commodo, quis aliquam massa facilisis.Integer convavel miberto merlonelaoreet, at ornare lorem consequat.</p>
-                        <a href="#" class="btn">Read more</a>
-                    </div>
-                    <div class="grid_4">
-                        <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="images/page-4_img08.jpg" alt=""></div></div>
-                        <h3>Genteger convallis orci vel mi nelaoreet, at ornare lorem consequat.</h3>
-                        <p>Meestibulum volutpatturpis ut massa commodo, quis aliquam massa facilisis.Integer convavel miberto merlonelaoreet, at ornare lorem consequatre. </p>
-                        <a href="#" class="btn">Read more</a>
-                    </div>
-                    <div class="grid_4">
-                        <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="images/page-4_img09.jpg" alt=""></div></div>
-                        <h3>Ternteger convallis orci vel mi nelaoreet, at ornare lorem consequat. </h3>
-                        <p>Testibulum volutpatturpis ut massa commodo, quis aliquam massa facilisis.Integer convavel miberto merlonelaoreet, at ornare lorem consequ.</p>
-                        <a href="#" class="btn">Read more</a>
-                    </div>
-                </div>
             </div>
         </section>
     </main>
