@@ -39,7 +39,7 @@ class Patisserie_view
         echo '<div class="row box-2">';
       }
         echo '<div class="grid_4">
-            <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="images/page-4_img0'.($i%9+1).'.jpg" alt=""></div></div>
+            <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="images\epicerie\11111530-d-finir-des-ic-nes-en-noir-et-blanc-de-biens-et-de-marchandises-dans-un-supermarch--Banque-d\'images.jpg" alt=""></div></div>
             <h3>'.$libelle.'</h3>
             <p>'.$description.'</p>
             <h3>'.$prix.' euros </h3>
