@@ -57,9 +57,13 @@
             </div>
         </div>
         <div class="toggle-menu-container">
+          <nav class="nav">
+                  <div class="nav_title"></div>
+                    <a class="sf-menu-toggle fa fa-bars" href="#"></a>
         <?php
           include "nav_bar_template.html"
          ?>
+             </nav>
        </div>
 
     </header>

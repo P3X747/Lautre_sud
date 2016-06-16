@@ -37,12 +37,14 @@
 
                 <div class="brand">
                     <h1 class="brand_name">
-                        <a href="./">Cafe</a>
+                          <a href="./">L'autre Sud</a>
                     </h1>
                 </div>
+                <nav class="nav">
                 <?php
                   include "nav_bar_template.html"
                  ?>
+               </nav>
             </div>
         </div>
 
