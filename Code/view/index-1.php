@@ -41,47 +41,9 @@
                     </h1>
                 </div>
 
-                <nav class="nav">
-                    <ul class="sf-menu">
-                        <li>
-                            <a href="./">Home</a>
-                        </li>
-                        <li class="active">
-                            <a href="index-1.php">About</a>
-                            <ul>
-                                <li>
-                                    <a href="#">Quisque nulla</a>
-                                </li>
-                                <li>
-                                    <a href="#">Vestibulum libero</a>
-                                    <ul>
-                                        <li>
-                                            <a href="#">Lorem</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Dolor</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Sit amet</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Vivamus eget nibh</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="index-2.php">What We Do</a>
-                        </li>
-                        <li>
-                            <a href="index-3.php">Menu</a>
-                        </li>
-                        <li>
-                            <a href="index-4.php">Contacts</a>
-                        </li>
-                    </ul>
-                </nav>
+                <?php
+                  include "nav_bar.php"
+                 ?>
             </div>
         </div>
 
