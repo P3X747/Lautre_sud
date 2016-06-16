@@ -17,12 +17,12 @@
         <a href="http://windows.microsoft.com/en-US/internet-explorer/..">
             <img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820"
                  alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/>
-        </a> 
+        </a>
     </div>
     <script src="js/html5shiv.js"></script>
     <![endif]-->
- 
-    <script src='js/device.min.js'></script> 
+
+    <script src='js/device.min.js'></script>
 </head>
 
 <body>
@@ -47,7 +47,7 @@
                             <a href="./">Home</a>
                         </li>
                         <li class="active">
-                            <a href="index-1.html">About</a>
+                            <a href="index-1.php">About</a>
                             <ul>
                                 <li>
                                     <a href="#">Quisque nulla</a>
@@ -72,13 +72,13 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="index-2.html">What We Do</a>
+                            <a href="index-2.php">What We Do</a>
                         </li>
                         <li>
-                            <a href="index-3.html">Menu</a>
+                            <a href="index-3.php">Menu</a>
                         </li>
                         <li>
-                            <a href="index-4.html">Contacts</a>
+                            <a href="index-4.php">Contacts</a>
                         </li>
                     </ul>
                 </nav>
@@ -110,7 +110,7 @@
                 <h2><em>Good Food </em>and Big Fun</h2>
                 <div class="row">
                     <div class="grid_6">
-                        <p class="indents-3">Integer convallis orci vel mi nelaoreet, at ornare lorem consequat. Phasellus era nisl auctor vel veliterol. sed,pharetra venenatis nulla. Vestibulum volutpatturpis ut massa commodo, quis aliquam massa facilisis.Integer convavel miberto merlonelaoreet, at ornare lorem consequat. Phasellus era nisl auctor venenatis nulla. Vestibulum volutpat turpis ut massa commodo, quis aliquam massa facilisis.<br><br>Vestibulum volutpat turpis ut massa commodo, quis aliquam massa facilisis.Integer convavel mi nelaoreet, at ornare lorem consequat. Phasellus era nisl auctor venenatis nullatibulum volutpat turpis ut massa commodoquis </p>                        
+                        <p class="indents-3">Integer convallis orci vel mi nelaoreet, at ornare lorem consequat. Phasellus era nisl auctor vel veliterol. sed,pharetra venenatis nulla. Vestibulum volutpatturpis ut massa commodo, quis aliquam massa facilisis.Integer convavel miberto merlonelaoreet, at ornare lorem consequat. Phasellus era nisl auctor venenatis nulla. Vestibulum volutpat turpis ut massa commodo, quis aliquam massa facilisis.<br><br>Vestibulum volutpat turpis ut massa commodo, quis aliquam massa facilisis.Integer convavel mi nelaoreet, at ornare lorem consequat. Phasellus era nisl auctor venenatis nullatibulum volutpat turpis ut massa commodoquis </p>
                     </div>
                     <div class="grid_6">
                         <p class="indents-3">Onteger convallis orci vel mi nelaoreet, at ornare lorem consequat. Phasellus era nisl auctor vel veliterol sed,pharetra venenatis nulla. Vestibulum volutpat turpis ut massa commodo, quis aliquam massa facilisis.Integer convallis orci vel mi nelaoreet, at ornare lorem consequat. Phasellus era nisl auctor vel veliterol. sed,pharetra venenatis nulla.<br><br>Vestibulum volutpat turpis ut massa commodo, quis aliquam massa fertoli estibulum volutpat turpis ut massa commodo, quis aliquam massa gertoli facilisis.Integer convallis orci vel mi nelaoreet, at ornare lorem consequat. Phasellus era nisl auctor vel veliterol sed,pharetra venenatis nulla.</p>
@@ -170,7 +170,7 @@
                         <p>Vestibulum volutpat turpis ut massa commodo, quis aliquam massa facilisis.Integer convallis orci vel mi nelaoreet, at ornare lorem consequat. Phasellus era nisl auctor vel veliterol. sed,pharetra venenatis nulla.</p>
                         <p class="client"><em>Linda Herman</em>Client</p>
                     </div>
-                </div>                
+                </div>
                 <div class="decoration"><a href="#" class="btn">Read more</a></div>
             </div>
         </section>

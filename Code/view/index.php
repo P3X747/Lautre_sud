@@ -52,7 +52,7 @@
 
             <div class="brand wow fadeIn">
                 <h1 class="brand_name">
-                    <a href="./">Cafe</a>
+                    <a href="./">L'autre Sud</a>
                 </h1>
             </div>
         </div>
@@ -66,7 +66,7 @@
                         <a href="./">Home</a>
                     </li>
                     <li>
-                        <a href="index-1.html">About</a>
+                        <a href="index-1.php">About</a>
                         <ul>
                             <li>
                                 <a href="#">Quisque nulla</a>
@@ -91,13 +91,13 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="index-2.html">What We Do</a>
+                        <a href="index-2.php">What We Do</a>
                     </li>
                     <li>
                         <a href="index-3.php">Menu</a>
                     </li>
                     <li>
-                        <a href="index-4.html">Contacts</a>
+                        <a href="index-4.php">Contacts</a>
                     </li>
                 </ul>
             </nav>

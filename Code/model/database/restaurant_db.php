@@ -7,7 +7,8 @@ class Restaurant_db extends  Abstract_db
   {
     // Enregistrement de la requete
     $stmt = $this->conn->prepare("SELECT *
-      FROM Element_carte");
+      FROM Element_carte
+      ORDER BY type");
       //Exécution de la requete
       $stmt->execute();
       //Récupération du résultat dans la variable resultat

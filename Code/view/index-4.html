@@ -18,12 +18,12 @@
         <a href="http://windows.microsoft.com/en-US/internet-explorer/..">
             <img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820"
                  alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/>
-        </a> 
+        </a>
     </div>
     <script src="js/html5shiv.js"></script>
     <![endif]-->
- 
-    <script src='js/device.min.js'></script> 
+
+    <script src='js/device.min.js'></script>
 </head>
 
 <body>
@@ -48,7 +48,7 @@
                             <a href="./">Home</a>
                         </li>
                         <li>
-                            <a href="index-1.html">About</a>
+                            <a href="index-1.php">About</a>
                             <ul>
                                 <li>
                                     <a href="#">Quisque nulla</a>
@@ -73,13 +73,13 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="index-2.html">What We Do</a>
+                            <a href="index-2.php">What We Do</a>
                         </li>
                         <li>
-                            <a href="index-3.html">Menu</a>
+                            <a href="index-3.php">Menu</a>
                         </li>
                         <li class="active">
-                            <a href="index-4.html">Contacts</a>
+                            <a href="index-4.php">Contacts</a>
                         </li>
                     </ul>
                 </nav>
@@ -111,35 +111,35 @@
                                 <label class="name">
                                     Your Name:
                                     <input type="text" name="name" placeholder="" value=""
-                                           data-constraints="@Required @JustLetters"/>                
+                                           data-constraints="@Required @JustLetters"/>
                                     <span class="empty-message">*This field is required.</span>
                                     <span class="error-message">*This is not a valid name.</span>
                                 </label>
-                
+
                                 <label class="email">
                                     Your E-mail:
                                     <input type="text" name="email" placeholder="" value=""
-                                           data-constraints="@Required @Email"/>                
+                                           data-constraints="@Required @Email"/>
                                     <span class="empty-message">*This field is required.</span>
                                     <span class="error-message">*This is not a valid email.</span>
                                 </label>
-                
+
                                 <label class="Subject">
                                     Subject:
                                     <input type="text" name="phone" placeholder="" value=""
-                                           data-constraints="@Required"/>                
+                                           data-constraints="@Required"/>
                                     <span class="empty-message">*This field is required.</span>
                                     <span class="error-message">*This is not a valid phone.</span>
                                 </label>
-                
+
                                 <label class="message">
                                     Message:
                                     <textarea name="message" placeholder=""
-                                              data-constraints='@Required @Length(min=20,max=999999)'></textarea>                
+                                              data-constraints='@Required @Length(min=20,max=999999)'></textarea>
                                     <span class="empty-message">*This field is required.</span>
                                     <span class="error-message">*The message is too short.</span>
                                 </label>
-                
+
                                 <div class="btn-wr">
                                     <a class="" href="#" data-type="reset">Clear</a>
                                     <a class="" href="#" data-type="submit">Send</a>
@@ -162,7 +162,7 @@
                                 </div>
                             </div>
                         </form>
-                    </div>    
+                    </div>
                     <div class="preffix_1 grid_6">
                         <h2>Contacts Information</h2>
                         <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur orci sed Curabitur vel lorem sit amet nulla ullamcorper fermentum. In vitae varius augue, eu consectetur ligula. Etiam dui eros, laoreet sit amet est vel</h3>
@@ -173,7 +173,7 @@
                                 <dt>Telphone:</dt> <dd>+1 800 603 6035</dd><br>
                                 <dt>FAX:</dt> <dd>+1 800 899 9898</dd><br>
                                 <dt>E-mail:</dt> <dd><a href="mailto:mail@demolink.org">mail@demolink.org</a></dd>
-                            </dl>                        
+                            </dl>
                         </address>
                     </div>
                 </div>
