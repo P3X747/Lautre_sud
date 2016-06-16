@@ -41,7 +41,7 @@
                     </h1>
                 </div>
                 <?php
-                  include "nav_bar_template.php"
+                  include "nav_bar_template.html"
                  ?>
             </div>
         </div>
@@ -53,7 +53,7 @@
     <main>
         <section class="well well__offset-3">
             <div class="container">
-                <h2><em>L'autre Sud</em>Menu</h2>
+                <h2><em>L'autre Sud</em>Epicerie</h2>
                 <?php
                 /*
           				require_once("../../model/database/restaurant_db.php");

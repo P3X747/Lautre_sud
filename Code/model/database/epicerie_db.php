@@ -2,13 +2,11 @@
 require_once('abstract_db.php');
 class Epicerie_db extends  Abstract_db
 {
-
-  public function getArticle()
+  public function getAllArticle()
   {
     // Enregistrement de la requete
     $stmt = $this->conn->prepare("SELECT *
-      FROM article
-      ORDER BY gammme");
+      FROM article");
       //Exécution de la requete
       $stmt->execute();
       //Récupération du résultat dans la variable resultat

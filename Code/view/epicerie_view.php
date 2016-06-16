@@ -14,7 +14,7 @@ class Epicerie_view
     {
       //Appel de la fonction getAllArticle ()
       //Enregistrement du résultat dans la variable $rslt
-      $rslt = $this->db_model->getAllArticle ();
+      $rslt = $this->db_model->getAllArticle();
       //Si il y a au moins une ligne
       if ($rslt->num_rows > 0) {
         //Variable $i enregistre le numero de la ligne à afficher
