@@ -42,7 +42,7 @@
                 </div>
 
                 <?php
-                  include "nav_bar.php"
+                  include "nav_bar_template.php"
                  ?>
             </div>
         </div>

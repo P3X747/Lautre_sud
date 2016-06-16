@@ -58,7 +58,7 @@
         </div>
         <div class="toggle-menu-container">
         <?php
-          include "nav_bar.php"
+          include "nav_bar_template.html"
          ?>
        </div>
 
