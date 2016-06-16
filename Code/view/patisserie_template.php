@@ -60,12 +60,12 @@
           				$coursModel = new Restaurant_db();
           				$coursModel->affichage_liste_Cours();
                   */
-                  require_once("/restaurant_view.php");
-          				$restaurant_view = new Restaurant_view();
+                  require_once("/patisserie_view.php");
+          				$patisserie_view = new Patisserie_view();
                   echo "<h2><em>Types</em></h2>";
-                  $restaurant_view->display_list_Type();
+                  $patisserie_view->display_list_Type();
                   echo "<h2><em>Formules</em></h2>";
-                  $restaurant_view->display_list_Formule();
+                  $patisserie_view->display_list_Formule();
                   echo "<h2><em>Carte</em></h2>";
           				$restaurant_view->display_list_ElementCarte();
           				?>
