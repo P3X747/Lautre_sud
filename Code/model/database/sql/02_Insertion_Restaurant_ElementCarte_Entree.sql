@@ -8,7 +8,7 @@ SELECT * FROM Element_cart, "Entree"e;
 
 /* Entrées */
 INSERT INTO Element_carte (libelle, description, prix, type, image)
-VALUES ("Taboulé libanais","Persil, tomate, oignon, bulgur, citron, huile d'olive.",4.50, "Entree", "taboule.jpg");
+VALUES ("Taboulé libanais","Persil, tomate, oignon, bulgur, citron, huile d'olive.",4.50, "Entree", "images/restaurant/Entree/taboule.jpg");
 
 INSERT INTO Element_carte (libelle, description, prix, type, image)
 VALUES ("Moussaka libanaise","Aubergine, tomate, ail, huile d'olive.",4.50, "Entree");

@@ -74,7 +74,7 @@ class Restaurant_view
       echo '<div class="row box-2">';
     }
     echo '<div class="grid_4">
-    <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="><img data-src="'.$image.'"  alt=""></div></div>
+    <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="'."$image".'"  alt=""></div></div>
     <h3>'.$libelle.'</h3>
     <h3>'.$image.'</h3>
     <p>'.$description.'</p>
