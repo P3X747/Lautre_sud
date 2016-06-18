@@ -55,7 +55,7 @@
     <main>
         <section class="well well__offset-3">
             <div class="container">
-                <h2><em>L'autre Sud</em>Menu</h2>
+                <h2><em>L'autre Sud</em></h2>
                 <?php
                 /*
           				require_once("../../model/database/restaurant_db.php");
@@ -70,6 +70,8 @@
                   $restaurant_view->display_list_Formule();
                   echo "<h2><em>Carte</em></h2>";
           				$restaurant_view->display_list_ElementCarte();
+                  echo "<h2><em>Boissons</em></h2>";
+          				$restaurant_view->display_list_Boisson();
           				?>
             </div>
         </section>
