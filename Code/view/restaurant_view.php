@@ -51,7 +51,7 @@ class Restaurant_view
           //La fonction fetch_assoc() permet de lire ligne par ligne le résultat de la requete sql
           while($row = $rslt->fetch_assoc())
           {
-            $this->display_ligne_ElementCarte($i,$row["libelle"],$row["description"],$row["prix"]);
+            $this->display_ligne_ElementCarte($i,$row["libelle"],$row["description"],$row["prix"],$row["image"]);
             $i =  $i + 1;
           }
           if ($i%3!=0)
@@ -67,17 +67,16 @@ class Restaurant_view
     }
   }
 
-  public function display_ligne_ElementCarte($i,$libelle,$description,$prix)
+  public function display_ligne_ElementCarte($i,$libelle,$description,$prix,$image)
   {
     if ($i%3==0)
     {
       echo '<div class="row box-2">';
     }
     echo '<div class="grid_4">
-    <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="><img data-src="images/page-4_img0'.($i%9+1).'.jpg"  alt=""></div></div>
+    <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="><img data-src="'.$image.'"  alt=""></div></div>
     <h3>'.$libelle.'</h3>
-    <h3>'.$i.'</h3>
-    <h3>'.($i%3).'</h3>
+    <h3>'.$image.'</h3>
     <p>'.$description.'</p>
     <h3>'.$prix.' euros </h3>
     <a href="#" class="btn">Read more</a>
@@ -147,7 +146,7 @@ class Restaurant_view
       {
         $this->display_ligne_Formule($i,$row["libelle"],$row["description"],$row["prix"]);
         $i =  $i + 1;
-      } 
+      }
     }
     else
     {
