@@ -1,4 +1,4 @@
-/* Boissons Fraîches : */
+/* Boissons Fraiches : */
 INSERT INTO Element_carte (libelle, type, prix, image)
 VALUES ("Eau cristalline (50Cl)","Boisson",1, "images/restaurant/Boisson/eau_cristalline_50CL.jpg");
 
@@ -16,16 +16,16 @@ VALUES ("Sodas","Boisson",1.50, "images/restaurant/Boisson/sodas.jpeg");
 
 /* Boissons Chaudes : (uniquement sur pace)*/
 INSERT INTO Element_carte (libelle, description, type, prix, image)
-VALUES ("Thé à la menthe : Le verre","Légèrement sucré, notre thé est préparé à la demande et de façon traditionnelle, avec du thé vert nature en graines et de la menthe verte fraîche.", "Boisson", 2,"images/restaurant/Boisson/the_menthe.jpg");
+VALUES ("The a la menthe : Le verre","Legerement sucre, notre the est prepare a la demande et de facon traditionnelle, avec du the vert nature en graines et de la menthe verte fraiche.", "Boisson", 2,"images/restaurant/Boisson/the_menthe.jpg");
 
 INSERT INTO Element_carte (libelle, type, prix, image)
-VALUES ("Thé vert au jasmin", "Boisson", 2, "images/restaurant/Boisson/the_vert_jasmin.jpg");
+VALUES ("The vert au jasmin", "Boisson", 2, "images/restaurant/Boisson/the_vert_jasmin.jpg");
 
 INSERT INTO Element_carte (libelle, type, prix, image)
-VALUES ("Thé vert au miel", "Boisson", 2, "images/restaurant/Boisson/the_vert_miel.jpg");
+VALUES ("The vert au miel", "Boisson", 2, "images/restaurant/Boisson/the_vert_miel.jpg");
 
 INSERT INTO Element_carte (libelle, type, prix, image)
-VALUES ("Café Espresso Malongo", "Boisson", 1.50, "images/restaurant/Boisson/cafe_espresso_malongo.jpg");
+VALUES ("Cafe Espresso Malongo", "Boisson", 1.50, "images/restaurant/Boisson/cafe_espresso_malongo.jpg");
 
 
 
