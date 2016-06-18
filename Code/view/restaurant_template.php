@@ -64,14 +64,16 @@
                   */
                   require_once("/restaurant_view.php");
           				$restaurant_view = new Restaurant_view();
-                  echo "<h2><em>Types</em></h2>";
-                  $restaurant_view->display_list_Type();
+                  //echo "<h2><em>Types</em></h2>";
+                  $restaurant_view->display_list_ElementCarte_by_type();
+                  /*
                   echo "<h2><em>Formules</em></h2>";
                   $restaurant_view->display_list_Formule();
                   echo "<h2><em>Carte</em></h2>";
           				$restaurant_view->display_list_ElementCarte();
                   echo "<h2><em>Boissons</em></h2>";
           				$restaurant_view->display_list_Boisson();
+                  */
           				?>
             </div>
         </section>
