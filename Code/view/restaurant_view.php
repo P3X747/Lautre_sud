@@ -147,7 +147,7 @@ class Restaurant_view
       {
         $this->display_ligne_Formule($i,$row["libelle"],$row["description"],$row["prix"]);
         $i =  $i + 1;
-      }
+      } 
     }
     else
     {
