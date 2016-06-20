@@ -2,9 +2,9 @@
 
 source 02_Insertion_Restaurant_ElementCarte_Plat.sql;
 
-/* Entrées */
+/*Entrées */
 
-/* source 02_Insertion_Restaurant_ElementCarte_Entree.sql; */
+source 02_Insertion_Restaurant_ElementCarte_Entree.sql;
 
 /* Boissons */
 

@@ -6,7 +6,7 @@ INSERT INTO Element_carte (libelle, type, prix, image)
 VALUES ("Perrier canette (33Cl)","Boisson", 1.50, "images/restaurant/Boisson/perrier_canette_33Cl.jpg");
 
 INSERT INTO Element_carte (libelle, type, prix, image)
-VALUES ("San pellegrinon (50Cl)","Boisson", 2, "images/restaurant/Boisson/san_pellegrinon_50Cl.jpg");
+VALUES ("San pellegrino (50Cl)","Boisson", 2, "images/restaurant/Boisson/san_pellegrinon_50Cl.jpg");
 
 INSERT INTO Element_carte (libelle, type, prix, image)
 VALUES ("Jus Gilbert","Boisson",1.50, "images/restaurant/Boisson/jus_gilbert.jpg");
