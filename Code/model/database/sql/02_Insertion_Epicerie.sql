@@ -20,9 +20,9 @@ REFERENCES Gamme(libelle)
 */
 
 INSERT INTO Article
-(libelle ,description,prix)
+(libelle ,description,prix,image)
 VALUES
-("Cafetière Orientale N°9","8 Tasses",5)
+("Cafetière Orientale N°9","8 Tasses",5,"images/restaurant/Boisson/eau_cristalline_50CL.jpg")
 ;
 INSERT INTO Article
 (libelle ,description,prix)

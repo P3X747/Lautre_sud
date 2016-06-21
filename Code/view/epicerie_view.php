@@ -22,7 +22,7 @@ class Epicerie_view
         //La fonction fetch_assoc() permet de lire ligne par ligne le résultat de la requete sql
         while($row = $rslt->fetch_assoc())
         {
-          $this->display_ligne_Article($i,$row["libelle"],$row["description"],$row["prix"]);
+          $this->display_ligne_Article($i,$row["libelle"],$row["description"],$row["prix"],$row["image"]);
           $i =  $i + 1;
         }
       }
@@ -32,14 +32,14 @@ class Epicerie_view
       }
     }
 
-    public function display_ligne_Article($i,$libelle,$description,$prix)
+    public function display_ligne_Article($i,$libelle,$description,$prix,$image)
     {
       if ($i%3==0)
       {
         echo '<div class="row box-2">';
       }
         echo '<div class="grid_4">
-            <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="images\epicerie\11111530-d-finir-des-ic-nes-en-noir-et-blanc-de-biens-et-de-marchandises-dans-un-supermarch--Banque-d\'images.jpg" alt=""></div></div>
+            <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="'."$image".'" alt=""></div></div>
             <h3>'.$libelle.'</h3>
             <p>'.$description.'</p>
             <h3>'.$prix.' euros </h3>
