@@ -22,7 +22,7 @@ class Patisserie_view
         //La fonction fetch_assoc() permet de lire ligne par ligne le résultat de la requete sql
         while($row = $rslt->fetch_assoc())
         {
-          $this->display_ligne_Patisserie($i,$row["libelle"],$row["description"],$row["prix"]);
+          $this->display_ligne_Patisserie($i,$row["libelle"],$row["description"],$row["prix"],$row["image"]);
           $i =  $i + 1;
         }
       }
@@ -32,14 +32,14 @@ class Patisserie_view
       }
     }
 
-    public function display_ligne_Patisserie($i,$libelle,$description,$prix)
+    public function display_ligne_Patisserie($i,$libelle,$description,$prix,$image)  "pierre"."-"."henri" = "pierre-henri"
     {
       if ($i%3==0)
       {
         echo '<div class="row box-2">';
       }
         echo '<div class="grid_4">
-            <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="images/page-4_img0'.($i%9+1).'.jpg" alt=""></div></div>
+            <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="'."$image".'"  alt=""></div></div>
             <h3>'.$libelle.'</h3>
             <p>'.$description.'</p>
             <h3>'.$prix.' euros </h3>
