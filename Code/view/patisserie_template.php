@@ -55,15 +55,8 @@
             <div class="container">
                 <h2><em>L'autre Sud</em>Menu</h2>
                 <?php
-                /*
-          				require_once("../../model/database/restaurant_db.php");
-          				$coursModel = new Restaurant_db();
-          				$coursModel->affichage_liste_Cours();
-                  */
                   require_once("/patisserie_view.php");
           				$restaurant_view = new Patisserie_view();
-                  echo "<h2><em>Catégorie</em></h2>";
-                  $restaurant_view->display_list_Categorie();
                   echo "<h2><em>Patisserie</em></h2>";
                   $restaurant_view->display_list_Patisserie();
           				?>
