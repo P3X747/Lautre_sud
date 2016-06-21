@@ -9,8 +9,8 @@ SELECT * FROM Categorie;
 /*
 Patisserie
 */
-INSERT INTO Patisserie(libelle, description, prix)
-VALUES ("Baclawa amandes, pistaches ou noix", "Pâtes feuilletées croustillantes farcies de fruits secs concassés et arrosées de miel.",1.80);
+INSERT INTO Patisserie(libelle, description, prix, image)
+VALUES ("Baclawa amandes, pistaches ou noix", "Pâtes feuilletées croustillantes farcies de fruits secs concassés et arrosées de miel.",1.80, "images/restaurant/Boisson/eau_cristalline_50CL.jpg");
 
 INSERT INTO Patisserie(libelle, description, prix)
 VALUES ("Chebakia sésame et miel:","Gâteau enrobé de sésame, arrosé de miel et légèrement parfumé à l'anis",1.80);
