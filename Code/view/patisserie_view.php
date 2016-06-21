@@ -32,7 +32,7 @@ class Patisserie_view
       }
     }
 
-    public function display_ligne_Patisserie($i,$libelle,$description,$prix,$image)  "pierre"."-"."henri" = "pierre-henri"
+    public function display_ligne_Patisserie($i,$libelle,$description,$prix,$image)
     {
       if ($i%3==0)
       {
