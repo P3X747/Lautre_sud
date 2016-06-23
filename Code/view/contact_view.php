@@ -77,7 +77,34 @@ class Contact_view
     public function display_ligne_Telephone($numero)
     {
       echo '<dt>Telphone:</dt> <dd>'.$numero.'</dd><br>';
+    }
 
+    public function display_list_Mail()
+    {
+      //Appel de la fonction getMail ()
+      //Enregistrement du résultat dans la variable $rslt
+      $rslt = $this->db_model->getMail();
+      //Si il y a au moins une ligne
+      if ($rslt->num_rows > 0) {
+        //Variable $i enregistre le numero de la ligne à afficher
+        $i = 0;
+        //La fonction fetch_assoc() permet de lire ligne par ligne le résultat de la requete sql
+        while($row = $rslt->fetch_assoc())
+        {
+          $this->display_ligne_Mail($row["valeur"]);
+          $i =  $i + 1;
+        }
+
+      }
+      else
+      {
+        echo "0 results";
+      }
+    }
+
+    public function display_ligne_Mail($valeur)
+    {
+      echo '<dt>E-mail:</dt> <dd><a href="'.$valeur.'">'.$valeur.'</dd><br>';
     }
   }
   ?>

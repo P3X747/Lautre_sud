@@ -136,9 +136,8 @@
                                 require_once("contact_view.php");
                         				$contact_view = new Contact_view();
                                 $contact_view->display_list_Telephone();
+                                $contact_view->display_list_Mail();
                                 ?>
-                                <dt>FAX:</dt> <dd>+1 800 899 9898</dd><br>
-                                <dt>E-mail:</dt> <dd><a href="mailto:mail@demolink.org">mail@demolink.org</a></dd>
                             </dl>
                         </address>
                     </div>
