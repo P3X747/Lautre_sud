@@ -1,20 +1,20 @@
 <?php
-class Patisserie_view
+class Contact_view
 {
 
   private $db_model;
 
   function __construct() {
-      require_once dirname(__FILE__) . '\..\model\database\patisserie_db.php';
-      $this->db_model = new Patisserie_db();
+      require_once dirname(__FILE__) . '\..\model\database\contact_db.php';
+      $this->db_model = new Contact_db();
       //******
   }
 
-    public function display_list_Patisserie()
+    public function display_list_Entreprise()
     {
-      //Appel de la fonction getAllPatisserie ()
+      //Appel de la fonction getEntreprise ()
       //Enregistrement du résultat dans la variable $rslt
-      $rslt = $this->db_model->getAllPatisserie();
+      $rslt = $this->db_model->getEntreprise();
       //Si il y a au moins une ligne
       if ($rslt->num_rows > 0) {
         //Variable $i enregistre le numero de la ligne à afficher
@@ -22,7 +22,7 @@ class Patisserie_view
         //La fonction fetch_assoc() permet de lire ligne par ligne le résultat de la requete sql
         while($row = $rslt->fetch_assoc())
         {
-          $this->display_ligne_Patisserie($i,$row["libelle"],$row["description"],$row["prix"],$row["image"]);
+          $this->display_ligne_Entreprise($i,$row["libelle"],$row["description"]);
           $i =  $i + 1;
         }
       }
@@ -32,7 +32,7 @@ class Patisserie_view
       }
     }
 
-    public function display_ligne_Patisserie($i,$libelle,$description,$prix,$image)
+    public function display_ligne_Entreprise($i,$libelle,$description)
     {
       if ($i%3==0)
       {
@@ -51,11 +51,11 @@ class Patisserie_view
         }
     }
 
-    public function display_list_Categorie()
+    public function display_list_Telephone()
     {
-      //Appel de la fonction getCategorie ()
+      //Appel de la fonction getTelephone ()
       //Enregistrement du résultat dans la variable $rslt
-      $rslt = $this->db_model->getCategorie();
+      $rslt = $this->db_model->getTelephone();
       //Si il y a au moins une ligne
       if ($rslt->num_rows > 0) {
         //Variable $i enregistre le numero de la ligne à afficher
@@ -63,13 +63,10 @@ class Patisserie_view
         //La fonction fetch_assoc() permet de lire ligne par ligne le résultat de la requete sql
         while($row = $rslt->fetch_assoc())
         {
-          $this->display_ligne_Categorie($i,$row["libelle"],$row["description"]);
+          $this->display_ligne_Telephone($row["numero"]);
           $i =  $i + 1;
         }
-        if ($i%3!=2)
-        {
-          echo '</div>';
-        }
+
       }
       else
       {
@@ -77,22 +74,10 @@ class Patisserie_view
       }
     }
 
-    public function display_ligne_Categorie($i,$libelle,$description)
+    public function display_ligne_Telephone($numero)
     {
-      if ($i%3==0)
-      {
-        echo '<div class="row box-2">';
-      }
-        echo '<div class="grid_4">
-            <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="images/page-4_img0'.($i%9+1).'.jpg" alt=""></div></div>
-            <h3>'.$libelle.'</h3>
-            <p>'.$description.'</p>
-            <a href="#" class="btn">Read more</a>
-        </div>';
-        if ($i%3==2)
-        {
-          echo '</div>';
-        }
+      echo '<dt>Telphone:</dt> <dd>'.$numero.'</dd><br>';
+
     }
   }
   ?>

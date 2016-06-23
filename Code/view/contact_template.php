@@ -132,7 +132,11 @@
                         <address class="address-2">
                             <div class="address_container"><p>The Company Name Inc. 9870 St Vincent Place, Glasgow, DC 45 Fr 45.</p></div>
                             <dl>
-                                <dt>Telphone:</dt> <dd>+1 800 603 6035</dd><br>
+                                <?php
+                                require_once("contact_view.php");
+                        				$contact_view = new Contact_view();
+                                $contact_view->display_list_Telephone();
+                                ?>
                                 <dt>FAX:</dt> <dd>+1 800 899 9898</dd><br>
                                 <dt>E-mail:</dt> <dd><a href="mailto:mail@demolink.org">mail@demolink.org</a></dd>
                             </dl>

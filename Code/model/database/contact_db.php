@@ -1,6 +1,6 @@
 <?php
 require_once('abstract_db.php');
-class Entreprise_db extends  Abstract_db
+class Contact_db extends  Abstract_db
 {
 
   public function getEntreprise()
