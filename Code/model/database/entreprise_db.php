@@ -3,12 +3,11 @@ require_once('abstract_db.php');
 class Entreprise_db extends  Abstract_db
 {
 
-  public function getAllElementCarte()
+  public function getEntreprise()
   {
     // Enregistrement de la requete
     $stmt = $this->conn->prepare("SELECT *
-      FROM Element_carte
-      ORDER BY type");
+      FROM Entreprise");
       //Exécution de la requete
       $stmt->execute();
       //Récupération du résultat dans la variable resultat
@@ -21,11 +20,11 @@ class Entreprise_db extends  Abstract_db
 
 
 
-    public function getType()
+    public function getMail()
     {
       // Enregistrement de la requete
       $stmt = $this->conn->prepare("SELECT *
-        FROM Type");
+        FROM Mail");
         //Exécution de la requete
         $stmt->execute();
         //Récupération du résultat dans la variable resultat
@@ -36,11 +35,11 @@ class Entreprise_db extends  Abstract_db
         return $resultat;
       }
 
-      public function getFormule()
+      public function getAdresse()
       {
         // Enregistrement de la requete
         $stmt = $this->conn->prepare("SELECT *
-          FROM Formule");
+          FROM Adresse");
           //Exécution de la requete
           $stmt->execute();
           //Récupération du résultat dans la variable resultat
@@ -51,6 +50,20 @@ class Entreprise_db extends  Abstract_db
           return $resultat;
         }
 
+        public function getTelephone()
+        {
+          // Enregistrement de la requete
+          $stmt = $this->conn->prepare("SELECT *
+            FROM Telephone");
+            //Exécution de la requete
+            $stmt->execute();
+            //Récupération du résultat dans la variable resultat
+            $resultat = $stmt->get_result();
+            //Fermeture de la connection avec la base de données MySql
+            $stmt->close();
+            //Retour de la variable resultat
+            return $resultat;
+          }
 
   }
   ?>
