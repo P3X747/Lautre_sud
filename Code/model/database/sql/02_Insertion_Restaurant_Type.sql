@@ -16,11 +16,6 @@ VALUES
 INSERT INTO Type
 (libelle)
 VALUES
-("Dessert")
-;
-INSERT INTO Type
-(libelle)
-VALUES
 ("Boisson")
 ;
 SELECT * FROM Type;

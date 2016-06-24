@@ -32,6 +32,24 @@ class Restaurant_view
     }
   }
 
+  public function display_menu_Restaurant()
+  {
+    echo   '<li>
+      <a href="restaurant_template.php">Restaurant</a>
+      <ul>
+      <li>
+      <a href="#">Entree</a>
+      </li>
+      <li>
+      <a href="#">Plat</a>
+      </li>
+      <li>
+      <a href="#">Boisson</a>
+      </li>
+      </ul>
+      </li>' ;
+  }
+
   public function display_list_ElementCarte_by_type()
   {
     //Appel de la fonction getAllElementCarte ()

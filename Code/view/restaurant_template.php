@@ -40,7 +40,7 @@
     <main>
         <section class="well well__offset-3">
             <div class="container">
-                <h2><em>L'autre Sud</em></h2>
+                <h2><em>L'autre Sud</em>Restaurant</h2>
                 <?php
                 /*
           				require_once("../../model/database/restaurant_db.php");

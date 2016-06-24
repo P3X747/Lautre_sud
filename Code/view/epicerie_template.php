@@ -42,15 +42,8 @@
             <div class="container">
                 <h2><em>L'autre Sud</em>Epicerie</h2>
                 <?php
-                /*
-          				require_once("../../model/database/restaurant_db.php");
-          				$coursModel = new Restaurant_db();
-          				$coursModel->affichage_liste_Cours();
-                  */
                   require_once("/epicerie_view.php");
           				$restaurant_view = new Epicerie_view();
-                  echo "<h2><em>Gammes</em></h2>";
-                  $restaurant_view->display_list_Gamme();
                   echo "<h2><em>Article</em></h2>";
           				$restaurant_view->display_list_Article();
           				?>
