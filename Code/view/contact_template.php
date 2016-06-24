@@ -46,7 +46,7 @@
                   <div id="google-map" class="map_model"></div>
                   <ul class="map_locations">
                     <li data-x="3.877105" data-y="43.607215">
-                      <p> 9870 St Vincent Place, Glasgow, DC 45 Fr 45. <span>800 2345-6789</span></p>
+                      <p> L'autre Sud, 26 rue des Etuves 34000 Montpellier </p>
                     </li>
                   </ul>
                 </div>
@@ -116,7 +116,7 @@
                         <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur orci sed Curabitur vel lorem sit amet nulla ullamcorper fermentum. In vitae varius augue, eu consectetur ligula. Etiam dui eros, laoreet sit amet est vel</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur orci sed Curabitur vel lorem sit amet nulla ullamcorper fermentum. In vitae varius augue, eu consectetur ligula. Etiam dui eros, laoreet sit amet est vel, commodo venenatis eros.Lamus at magna non nunc tristique rhoncuseri tym.<br><br>Etiam dui eros, laoreet sit amet est vel, commodo venenatis eros.Lamus at magna non nunc tristique rhoncuseri tym. Etiam dui eros, laoreet sit amet est vel, commodo venenatis eros.Lamus at magna non nunc tristique.</p>
                         <address class="address-2">
-                            <div class="address_container"><p>The Company Name Inc. 9870 St Vincent Place, Glasgow, DC 45 Fr 45.</p></div>
+                            <div class="address_container"><p>L'autre Sud, 26 rue des Etuves 34000 Montpellier</p></div>
                             <dl>
                                 <?php
                                 require_once("contact_view.php");
