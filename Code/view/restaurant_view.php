@@ -46,7 +46,7 @@ class Restaurant_view
         {
           echo'
           <li>
-          <a href="#'.$row["libelle"].'">'.$row["libelle"].'</a>
+          <a href="restaurant_template.php#'.$row["libelle"].'">'.$row["libelle"].'</a>
           </li>';
           }
         }
