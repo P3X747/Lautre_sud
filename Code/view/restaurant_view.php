@@ -34,18 +34,23 @@ class Restaurant_view
 
   public function display_menu_Restaurant()
   {
-    echo   '<li>
+    echo'<li>
       <a href="restaurant_template.php">Restaurant</a>
-      <ul>
-      <li>
-      <a href="#">Entree</a>
-      </li>
-      <li>
-      <a href="#">Plat</a>
-      </li>
-      <li>
-      <a href="#">Boisson</a>
-      </li>
+      <ul>';
+      //Appel de la fonction getAllElementCarte ()
+      $rslt_type = $this->db_model->getType();
+      //Si il y a au moins une ligne
+      if ($rslt_type->num_rows > 0) {
+        //La fonction fetch_assoc() permet de lire ligne par ligne le résultat de la requete sql
+        while($row = $rslt_type->fetch_assoc())
+        {
+          echo'
+          <li>
+          <a href="#">'.$row["libelle"].'</a>
+          </li>';
+          }
+        }
+      echo'
       </ul>
       </li>' ;
   }
