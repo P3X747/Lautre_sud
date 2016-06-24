@@ -46,7 +46,7 @@ class Restaurant_view
         {
           echo'
           <li>
-          <a href="#">'.$row["libelle"].'</a>
+          <a href="#'.$row["libelle"].'">'.$row["libelle"].'</a>
           </li>';
           }
         }
@@ -65,7 +65,7 @@ class Restaurant_view
       while($row = $rslt_type->fetch_assoc())
       {
         $rslt = $this->db_model->getElementCarte($row["libelle"]);
-        echo "<h2><em>".$row["libelle"]."</em></h2>";
+        echo '<h2 id="'.$row["libelle"].'"><em>'.$row["libelle"].'</em></h2>';
         //Si il y a au moins une ligne
         if ($rslt->num_rows > 0)
         {
