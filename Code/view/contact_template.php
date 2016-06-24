@@ -31,24 +31,10 @@
     <!--========================================================
                               HEADER
     =========================================================-->
-    <header>
-
-        <div id="stuck_container" class="stuck_container">
-            <div class="container">
-
-                <div class="brand">
-                    <h1 class="brand_name">
-                        <a href="./">Cafe</a>
-                    </h1>
-                </div>
-
-                <?php
-                  include "nav_bar_template.html"
-                 ?>
-            </div>
-        </div>
-
-    </header>
+    <?php
+    include "display.php";
+    get_header_page();
+     ?>
     <!--========================================================
                               CONTENT
     =========================================================-->
