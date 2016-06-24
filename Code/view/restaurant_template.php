@@ -30,25 +30,10 @@
     <!--========================================================
                               HEADER
     =========================================================-->
-    <header>
-
-        <div id="stuck_container" class="stuck_container">
-            <div class="container">
-
-                <div class="brand">
-                    <h1 class="brand_name">
-                          <a href="./">L'autre Sud</a>
-                    </h1>
-                </div>
-                <nav class="nav">
-                <?php
-                  include "nav_bar_template.html"
-                 ?>
-               </nav>
-            </div>
-        </div>
-
-    </header>
+    <?php
+    include "display.php";
+    get_header_page();
+     ?>
     <!--========================================================
                               CONTENT
     =========================================================-->

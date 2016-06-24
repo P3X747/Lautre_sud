@@ -1,84 +1,152 @@
 <?php
-
-function get_index_header()
+function get_header_page()
 {
-  echo '<header>
+  echo '
+  <header>
 
-      <div class="camera_container">
-          <div id="camera" class="camera_wrap">
-              <div data-thumb="images/slide01_thumb.jpg" data-src="images/slide01.jpg">
-                  <div class="camera_caption fadeIn">
-                  </div>
-              </div>
-              <div data-thumb="images/slide02_thumb.jpg" data-src="images/slide02.jpg">
-                  <div class="camera_caption fadeIn">
-                  </div>
-              </div>
-              <div data-thumb="images/slide03_thumb.jpg" data-src="images/slide03.jpg">
-                  <div class="camera_caption fadeIn">
-                  </div>
-              </div>
-          </div>
+      <div id="stuck_container" class="stuck_container">
+          <div class="container">
 
-          <div class="brand wow fadeIn">
-              <h1 class="brand_name">
-                  <a href="./">L\'autre Sud</a>
-              </h1>
+              <div class="brand">
+                  <h1 class="brand_name">
+                        <a href="./">L\'autre Sud</a>
+                  </h1>
+              </div>
+              <nav class="nav">
+              <ul class="sf-menu">
+                  <li>
+                      <a href="presentation_template.php">Presentation</a>
+                  </li>
+                  <li>
+                      <a href="patisserie_template.php">Patisserie</a>
+                      <ul>
+                        <li>
+                            <a href="#">Catégorie 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Catégorie 2</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="restaurant_template.php">Restaurant</a>
+                      <ul>
+                        <li>
+                            <a href="#">Entree</a>
+                        </li>
+                        <li>
+                            <a href="#">Plat</a>
+                        </li>
+                        <li>
+                            <a href="#">Boisson</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="epicerie_template.php">Epicerie</a>
+                      <ul>
+                        <li>
+                            <a href="#">Gamme 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Gamme 2</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="contact_template.php">Contacts</a>
+                    </li>
+              </ul>
+             </nav>
           </div>
       </div>
-      <div class="toggle-menu-container">
-        <nav class="nav">
-                <div class="nav_title"></div>
-                  <a class="sf-menu-toggle fa fa-bars" href="#"></a>
-                  <ul class="sf-menu">
-                      <li>
-                          <a href="presentation_template.php">Presentation</a>
-                      </li>
-                      <li>
-                          <a href="patisserie_template.php">Patisserie</a>
-                          <ul>
-                            <li>
-                                <a href="#">Catégorie 1</a>
-                            </li>
-                            <li>
-                                <a href="#">Catégorie 2</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <a href="restaurant_template.php">Restaurant</a>
-                          <ul>
-                            <li>
-                                <a href="#">Entree</a>
-                            </li>
-                            <li>
-                                <a href="#">Plat</a>
-                            </li>
-                            <li>
-                                <a href="#">Boisson</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <a href="epicerie_template.php">Epicerie</a>
-                          <ul>
-                            <li>
-                                <a href="#">Gamme 1</a>
-                            </li>
-                            <li>
-                                <a href="#">Gamme 2</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <a href="contact_template.php">Contacts</a>
-                        </li>
-                  </ul>
 
-           </nav>
-     </div>
+  </header>
+  ';
+}
+function get_index_header_picture()
+{
+  echo '  <div class="camera_container">
+        <div id="camera" class="camera_wrap">
+            <div data-thumb="images/slide01_thumb.jpg" data-src="images/slide01.jpg">
+                <div class="camera_caption fadeIn">
+                </div>
+            </div>
+            <div data-thumb="images/slide02_thumb.jpg" data-src="images/slide02.jpg">
+                <div class="camera_caption fadeIn">
+                </div>
+            </div>
+            <div data-thumb="images/slide03_thumb.jpg" data-src="images/slide03.jpg">
+                <div class="camera_caption fadeIn">
+                </div>
+            </div>
+        </div>
 
-  </header>';
+        <div class="brand wow fadeIn">
+            <h1 class="brand_name">
+                <a href="./">L\'autre Sud</a>
+            </h1>
+        </div>
+    </div>';
+}
+
+function get_index_header_menu()
+{
+  echo '<div class="toggle-menu-container">
+    <nav class="nav">
+            <div class="nav_title"></div>
+              <a class="sf-menu-toggle fa fa-bars" href="#"></a>
+              <ul class="sf-menu">
+                  <li>
+                      <a href="presentation_template.php">Presentation</a>
+                  </li>
+                  <li>
+                      <a href="patisserie_template.php">Patisserie</a>
+                      <ul>
+                        <li>
+                            <a href="#">Catégorie 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Catégorie 2</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="restaurant_template.php">Restaurant</a>
+                      <ul>
+                        <li>
+                            <a href="#">Entree</a>
+                        </li>
+                        <li>
+                            <a href="#">Plat</a>
+                        </li>
+                        <li>
+                            <a href="#">Boisson</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="epicerie_template.php">Epicerie</a>
+                      <ul>
+                        <li>
+                            <a href="#">Gamme 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Gamme 2</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="contact_template.php">Contacts</a>
+                    </li>
+              </ul>
+
+       </nav>
+ </div>';
+}
+function get_index_header()
+{
+  echo '<header>'.get_index_header_picture().get_index_header_menu().'</header>';
 }
 function get_index_main()
 {
