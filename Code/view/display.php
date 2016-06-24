@@ -1,10 +1,8 @@
 <?php
 include "restaurant_view.php";
 
-function get_nav_menu()
+function get_nav_menu_list()
 {
-  echo '<nav class="nav">
-  <ul class="sf-menu">';
   echo'
   <li>
   <a href="presentation_template.php">Presentation</a>
@@ -42,6 +40,15 @@ function get_nav_menu()
   <li>
   <a href="contact_template.php">Contacts</a>
   </li>';
+  echo'
+  </ul>';
+}
+
+function get_nav_menu()
+{
+  echo '<nav class="nav">
+  <ul class="sf-menu">';
+  get_nav_menu_list();
   echo'
   </ul>
   </nav>';
@@ -101,48 +108,9 @@ function get_index_header_menu()
   <div class="nav_title"></div>
   <a class="sf-menu-toggle fa fa-bars" href="#"></a>
   <ul class="sf-menu">
-  <li>
-  <a href="presentation_template.php">Presentation</a>
-  </li>
-  <li>
-  <a href="patisserie_template.php">Patisserie</a>
-  <ul>
-  <li>
-  <a href="#">Catégorie 1</a>
-  </li>
-  <li>
-  <a href="#">Catégorie 2</a>
-  </li>
-  </ul>
-  </li>
-  <li>
-  <a href="restaurant_template.php">Restaurant</a>
-  <ul>
-  <li>
-  <a href="#">Entree</a>
-  </li>
-  <li>
-  <a href="#">Plat</a>
-  </li>
-  <li>
-  <a href="#">Boisson</a>
-  </li>
-  </ul>
-  </li>
-  <li>
-  <a href="epicerie_template.php">Epicerie</a>
-  <ul>
-  <li>
-  <a href="#">Gamme 1</a>
-  </li>
-  <li>
-  <a href="#">Gamme 2</a>
-  </li>
-  </ul>
-  </li>
-  <li>
-  <a href="contact_template.php">Contacts</a>
-  </li>
+  ';
+  get_nav_menu_list();
+  echo'
   </ul>
 
   </nav>
