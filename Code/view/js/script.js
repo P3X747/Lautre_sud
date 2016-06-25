@@ -286,3 +286,24 @@ var o = $('#camera');
     }
 })
 (jQuery);
+
+/* Google Map
+ ========================================================*/
+;
+(function ($) {
+    var o = document.getElementById("google-map1");
+    if (o) {
+        include('//maps.google.com/maps/api/js?sensor=false');
+        include('js/jquery.rd-google-map.js');
+
+        $(document).ready(function () {
+            var o = $('#google-map1');
+            if (o.length > 0){
+                o.googleMap({
+                    styles: []
+                });
+            }
+        });
+    }
+})
+(jQuery);

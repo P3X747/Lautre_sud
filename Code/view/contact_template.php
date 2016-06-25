@@ -50,6 +50,14 @@
                     </li>
                   </ul>
                 </div>
+                <div class="map">
+                  <div id="google-map1" class="map_model"></div>
+                  <ul class="map_locations">
+                    <li data-x="3.877105" data-y="43.607215">
+                      <p> L'autre Sud, 26 rue des Etuves 34000 Montpellier </p>
+                    </li>
+                  </ul>
+                </div>
                 <div class="row box-3">
                     <div class="grid_5">
                         <h2>Contacts Form</h2>
