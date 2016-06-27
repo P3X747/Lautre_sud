@@ -97,8 +97,15 @@ class Restaurant_view
       echo '<div class="row box-2">';
     }
     echo '<div class="grid_4">
-    <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="'."$image".'"  alt=""></div></div>
-    <h3 class="prix_elt_crte">prix : '.$prix.' euros </h3>
+    <div class="img">
+    <div class="lazy-img" style="padding-bottom: 76.21621621621622%;">
+    <div class="container_elt_crte">
+    <img data-src="'."$image".'"  alt="">
+      <h3 class="prix_elt_crte">'.$prix.' € </h3>
+  </div>
+    </div>
+    </div>
+
     <h3 class="elt_crte"><em>'.$libelle.'<em></h3>
     <br>
     <p class="elt_crte">'.$description.'</p>

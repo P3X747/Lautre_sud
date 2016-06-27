@@ -1,11 +1,10 @@
-.image {
-   position: relative;
-   width: 100%; /* for IE 6 */
+h3.prix_elt_crte {
+    border: 2px solid red;
+    border-radius: 25px;
+    color : white;
+    position: absolute;
+    top: 85%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
 }
-
-.prix_elt_crte {
-   position: relative;
-   width: 100%; /* for IE 6 */
-}
-
-//https://css-tricks.com/text-blocks-over-image/
