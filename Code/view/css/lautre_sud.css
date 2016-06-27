@@ -1,0 +1,9 @@
+.prix_elt_crte {
+    //border: 2px solid red;
+    border-radius: 25px;
+    color : red;
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}

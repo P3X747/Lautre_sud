@@ -1,8 +1,7 @@
 <?php
-class Patisserie_view
+require_once('abstract_view.php');
+class Patisserie_view extends Abstract_view
 {
-
-  private $db_model;
 
   function __construct() {
       require_once dirname(__FILE__) . '\..\model\database\patisserie_db.php';
@@ -22,7 +21,7 @@ class Patisserie_view
         //La fonction fetch_assoc() permet de lire ligne par ligne le résultat de la requete sql
         while($row = $rslt->fetch_assoc())
         {
-          $this->display_ligne_Patisserie($i,$row["libelle"],$row["description"],$row["prix"],$row["image"]);
+          $this->display_ligne_ElementCarte($i,$row["libelle"],$row["description"],$row["prix"],$row["image"]);
           $i =  $i + 1;
         }
       }
