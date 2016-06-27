@@ -1,0 +1,11 @@
+.image {
+   position: relative;
+   width: 100%; /* for IE 6 */
+}
+
+.prix_elt_crte {
+   position: relative;
+   width: 100%; /* for IE 6 */
+}
+
+//https://css-tricks.com/text-blocks-over-image/
