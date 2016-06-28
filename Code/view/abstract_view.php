@@ -19,12 +19,14 @@ class Abstract_view
   </div>
     </div>
     </div>
-
-    <h3 class="elt_crte"><em>'.$libelle.'<em></h3>
     <br>
-    <p class="elt_crte">'.$description.'</p>
     <br>
-
+    <table style="width:100%;">
+      <tr>
+        <td align="left"><h3 class="elt_crte"><em>'.$libelle.'<em></h3></td>
+        <td align="right"><p class="elt_crte">'.$description.'</p></td>
+      </tr>
+    </table>
     </div>';
     if ($i%3==2)
     {
