@@ -94,9 +94,10 @@ CREATE TABLE Ligne_formule
   description varchar(255),
   CONSTRAINT pk_Ligne_formule PRIMARY KEY (formule, type, quantite),
   CONSTRAINT fk_Formule_Ligne_formule FOREIGN KEY (formule)
-  REFERENCES Formule(libelle),
-  CONSTRAINT fk_Type_Ligne_formule FOREIGN KEY (type)
+  REFERENCES Formule(libelle)
+/* CONSTRAINT fk_Type_Ligne_formule FOREIGN KEY (type)
   REFERENCES Type(libelle)
+*/
 );
 select "Ligne_formule";
 DESC Ligne_formule;
