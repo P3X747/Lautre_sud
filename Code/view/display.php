@@ -5,20 +5,12 @@ function get_nav_menu_list()
 {
   echo'
   <li>
-  <a href="presentation_template.php">Presentation</a>
+  <a href="index.php">Presentation</a>
   </li>
   ';
   echo'
   <li>
   <a href="patisserie_template.php">Patisserie</a>
-  <ul>
-  <li>
-  <a href="#">Catégorie 1</a>
-  </li>
-  <li>
-  <a href="#">Catégorie 2</a>
-  </li>
-  </ul>
   </li>
   ';
   $restaurant_view = new Restaurant_view();
@@ -26,14 +18,6 @@ function get_nav_menu_list()
   echo'
   <li>
   <a href="epicerie_template.php">Epicerie</a>
-  <ul>
-  <li>
-  <a href="#">Gamme 1</a>
-  </li>
-  <li>
-  <a href="#">Gamme 2</a>
-  </li>
-  </ul>
   </li>
   ';
   echo'
@@ -293,7 +277,6 @@ function get_footer()
   <a href="#">Privacy Policy</a>
   </div>
   </div>
-  <div class="tm"><a href="#"><img src="images/TM_logo.png" alt=""></a></div>
   </footer>';
 }
 ?>
