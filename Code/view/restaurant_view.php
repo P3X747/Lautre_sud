@@ -69,7 +69,7 @@ class Restaurant_view extends Abstract_view
                 </div>
             </div>
             <div class="tm"><a href="#"><img src="images/TM_logo.png" alt=""></a></div>
-        </footer>
+        </footer>s
     </div>
 
     <script src="js/script.js"></script>
