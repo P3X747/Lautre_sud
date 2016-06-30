@@ -12,7 +12,7 @@ class Index_view extends Abstract_view
     <title>Home</title>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no"/>
-    <link rel="icon" href="template\images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/camera.css">
@@ -25,7 +25,7 @@ class Index_view extends Abstract_view
     <html class="lt-ie9">
     <div style=\' clear: both; text-align:center; position: relative;\'>
         <a href="http://windows.microsoft.com/en-US/internet-explorer/..">
-            <img src="template\images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820"
+            <img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820"
                  alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/>
         </a>
     </div>
@@ -48,29 +48,30 @@ class Index_view extends Abstract_view
 
   public function get_index_header_picture()
   {
+    echo getcwd() . "\n";
     $index_header_picture = '  <div class="camera_container">
     <div id="camera" class="camera_wrap">
-    <div data-thumb="template\images\restaurant\Plat\couscous_vegetarien_thumb.jpg" data-src="template\images\restaurant\Plat\couscous_vegetarien.jpg">
+    <div data-thumb="images\restaurant\Plat\couscous_vegetarien_thumb.jpg" data-src="images\restaurant\Plat\couscous_vegetarien.jpg">
     <div class="camera_caption fadeIn">
     </div>
     </div>
-    <div data-thumb="template\images\slide02_thumb.jpg" data-src="template\images\patisserie\Makroudhs dattes.jpg">
+    <div data-thumb="images/slide02_thumb.jpg" data-src="images\patisserie\Makroudhs dattes.jpg">
     <div class="camera_caption fadeIn">
     </div>
     </div>
-    <div data-thumb="template\images\restaurant\Entree\images\caviar_aubergine_thumb.jpg" data-src="template\images\restaurant\Entree\caviar_aubergine.jpg">
+    <div data-thumb="images\restaurant\Entree\images\caviar_aubergine_thumb.jpg" data-src="images\restaurant\Entree\caviar_aubergine.jpg">
     <div class="camera_caption fadeIn">
     </div>
     </div>
-    <div data-thumb="template\images\slide02_thumb.jpg" data-src="template\images\patisserie\Losanges amandes, pistaches ou noix.JPG">
+    <div data-thumb="images/slide02_thumb.jpg" data-src="images\patisserie\Losanges amandes, pistaches ou noix.JPG">
     <div class="camera_caption fadeIn">
     </div>
     </div>
-    <div data-thumb="template\images\slide02_thumb.jpg" data-src="template\images\patisserie\Cigare noix de cajous ou amandes.JPG">
+    <div data-thumb="images/slide02_thumb.jpg" data-src="images\patisserie\Cigare noix de cajous ou amandes.JPG">
     <div class="camera_caption fadeIn">
     </div>
     </div>
-    <div data-thumb="template\images\slide03_thumb.jpg" data-src="template\images\patisserie\Baclawa amandes.JPG">
+    <div data-thumb="images/slide03_thumb.jpg" data-src="images\patisserie\Baclawa amandes.JPG">
     <div class="camera_caption fadeIn">
     </div>
     </div>
@@ -258,7 +259,7 @@ class Index_view extends Abstract_view
       echo '<div class="row box-2">';
     }
     echo '<div class="grid_4">
-    <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="template\images/page-4_img0'.($i%9+1).'.jpg" alt=""></div></div>
+    <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="images/page-4_img0'.($i%9+1).'.jpg" alt=""></div></div>
     <h3>'.$libelle.'</h3>
     <p>'.$description.'</p>
     <a href="#" class="btn">Read more</a>
@@ -298,7 +299,7 @@ class Index_view extends Abstract_view
       echo '<div class="row box-2">';
     }
     echo '<div class="grid_4">
-    <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="template\images/page-4_img0'.($i%9+1).'.jpg" alt=""></div></div>
+    <div class="img"><div class="lazy-img" style="padding-bottom: 76.21621621621622%;"><img data-src="images/page-4_img0'.($i%9+1).'.jpg" alt=""></div></div>
     <h3>'.$libelle.'</h3>
     <p>'.$description.'</p>
     <h3>'.$prix.' euros </h3>
