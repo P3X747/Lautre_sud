@@ -48,30 +48,29 @@ class Index_view extends Abstract_view
 
   public function get_index_header_picture()
   {
-    echo getcwd() . "\n";
     $index_header_picture = '  <div class="camera_container">
     <div id="camera" class="camera_wrap">
-    <div data-thumb="images\restaurant\Plat\couscous_vegetarien_thumb.jpg" data-src="images\restaurant\Plat\couscous_vegetarien.jpg">
+    <div data-thumb="http:\\localhost\Lautre_sud\Code\view\template\images\restaurant\Plat\couscous_vegetarien_thumb.jpg" data-src="http:\\localhost\Lautre_sud\Code\view\template\images\\restaurant\Plat\couscous_vegetarien.jpg">
     <div class="camera_caption fadeIn">
     </div>
     </div>
-    <div data-thumb="images/slide02_thumb.jpg" data-src="images\patisserie\Makroudhs dattes.jpg">
+    <div data-thumb="http:\\localhost\Lautre_sud\Code\view\template\images\\slide02_thumb.jpg" data-src="http:\\localhost\Lautre_sud\Code\view\template\images\\patisserie\Makroudhs dattes.jpg">
     <div class="camera_caption fadeIn">
     </div>
     </div>
-    <div data-thumb="images\restaurant\Entree\images\caviar_aubergine_thumb.jpg" data-src="images\restaurant\Entree\caviar_aubergine.jpg">
+    <div data-thumb="http:\\localhost\Lautre_sud\Code\view\template\images\\restaurant\Entree\http:\\localhost\Lautre_sud\Code\view\template\images\\caviar_aubergine_thumb.jpg" data-src="http:\\localhost\Lautre_sud\Code\view\template\images\\restaurant\Entree\caviar_aubergine.jpg">
     <div class="camera_caption fadeIn">
     </div>
     </div>
-    <div data-thumb="images/slide02_thumb.jpg" data-src="images\patisserie\Losanges amandes, pistaches ou noix.JPG">
+    <div data-thumb="http:\\localhost\Lautre_sud\Code\view\template\images\\slide02_thumb.jpg" data-src="http:\\localhost\Lautre_sud\Code\view\template\images\\patisserie\Losanges amandes, pistaches ou noix.JPG">
     <div class="camera_caption fadeIn">
     </div>
     </div>
-    <div data-thumb="images/slide02_thumb.jpg" data-src="images\patisserie\Cigare noix de cajous ou amandes.JPG">
+    <div data-thumb="http:\\localhost\Lautre_sud\Code\view\template\images\\slide02_thumb.jpg" data-src="http:\\localhost\Lautre_sud\Code\view\template\images\\patisserie\Cigare noix de cajous ou amandes.JPG">
     <div class="camera_caption fadeIn">
     </div>
     </div>
-    <div data-thumb="images/slide03_thumb.jpg" data-src="images\patisserie\Baclawa amandes.JPG">
+    <div data-thumb="http:\\localhost\Lautre_sud\Code\view\template\images\\slide03_thumb.jpg" data-src="http:\\localhost\Lautre_sud\Code\view\template\images\\patisserie\Baclawa amandes.JPG">
     <div class="camera_caption fadeIn">
     </div>
     </div>
