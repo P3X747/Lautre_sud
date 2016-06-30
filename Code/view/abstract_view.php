@@ -143,7 +143,7 @@ class Abstract_view
   }
 
 
-  
+
   public function get_footer()
   {
     $footer ='<footer>
