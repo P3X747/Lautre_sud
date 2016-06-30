@@ -4,7 +4,7 @@ class Epicerie_view extends Abstract_view
 {
 
   function __construct() {
-      require_once dirname(__FILE__) . '\..\model\database\epicerie_db.php';
+      require_once dirname(__FILE__) . '\..\model\epicerie_db.php';
       $this->db_model = new Epicerie_db();
       //******
   }

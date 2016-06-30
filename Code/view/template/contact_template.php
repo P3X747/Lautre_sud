@@ -32,7 +32,7 @@
                               HEADER
     =========================================================-->
     <?php
-    include "display.php";
+    include "../display.php";
     get_header_page();
      ?>
     <!--========================================================
@@ -127,7 +127,7 @@
                             <div class="address_container"><p>L'autre Sud, 26 rue des Etuves 34000 Montpellier</p></div>
                             <dl>
                                 <?php
-                                require_once("contact_view.php");
+                                require_once("../contact_view.php");
                         				$contact_view = new Contact_view();
                                 $contact_view->display_list_Telephone();
                                 $contact_view->display_list_Mail();

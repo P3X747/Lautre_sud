@@ -5,7 +5,7 @@ class Restaurant_view
   private $db_model;
 
   function __construct() {
-    require_once dirname(__FILE__) . '\..\model\database\restaurant_db.php';
+    require_once dirname(__FILE__) . '\..\model\restaurant_db.php';
     $this->db_model = new Restaurant_db();
     //******
   }

@@ -35,7 +35,7 @@
                               HEADER
     =========================================================-->
     <?php
-    include "display.php";
+    include "../display.php";
     get_header_page();
     get_index_main();
     get_index_header_picture();

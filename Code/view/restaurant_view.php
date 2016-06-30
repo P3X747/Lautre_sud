@@ -2,13 +2,11 @@
 require_once('abstract_view.php');
 class Restaurant_view extends Abstract_view
 {
-
   function __construct() {
-    require_once dirname(__FILE__) . '\..\model\database\restaurant_db.php';
+    require_once dirname(__FILE__) . '\..\model\restaurant_db.php';
     $this->db_model = new Restaurant_db();
     //******
   }
-
   public function display_list_ElementCarte()
   {
     //Appel de la fonction getAllElementCarte ()
@@ -30,7 +28,6 @@ class Restaurant_view extends Abstract_view
       echo "0 results";
     }
   }
-
   public function display_menu_Restaurant()
   {
     echo'<li>
@@ -53,7 +50,6 @@ class Restaurant_view extends Abstract_view
       </ul>
       </li>' ;
   }
-
   public function display_list_ElementCarte_by_type()
   {
     //Appel de la fonction getAllElementCarte ()
@@ -88,8 +84,6 @@ class Restaurant_view extends Abstract_view
       }
     }
   }
-
-
   public function display_list_Type()
   {
     //Appel de la fonction getType ()
@@ -115,7 +109,6 @@ class Restaurant_view extends Abstract_view
       echo "0 results";
     }
   }
-
   public function display_ligne_Type($i,$libelle,$description)
   {
     if ($i%3==0)
@@ -133,8 +126,6 @@ class Restaurant_view extends Abstract_view
       echo '</div>';
     }
   }
-
-
   public function display_list_Formule()
   {
     //Appel de la fonction getFormule ()
@@ -156,7 +147,6 @@ class Restaurant_view extends Abstract_view
       echo "0 results";
     }
   }
-
   public function display_ligne_Formule($i,$libelle,$description,$prix)
   {
     if ($i%3==0)

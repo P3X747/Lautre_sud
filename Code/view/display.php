@@ -63,15 +63,27 @@ function get_index_header_picture()
 {
   echo '  <div class="camera_container">
   <div id="camera" class="camera_wrap">
-  <div data-thumb="images/slide01_thumb.jpg" data-src="images/slide01.jpg">
+  <div data-thumb="images\restaurant\Plat\couscous_vegetarien_thumb.jpg" data-src="images\restaurant\Plat\couscous_vegetarien.jpg">
   <div class="camera_caption fadeIn">
   </div>
   </div>
-  <div data-thumb="images/slide02_thumb.jpg" data-src="images/slide02.jpg">
+  <div data-thumb="images/slide02_thumb.jpg" data-src="images\patisserie\Makroudhs dattes.jpg">
   <div class="camera_caption fadeIn">
   </div>
   </div>
-  <div data-thumb="images/slide03_thumb.jpg" data-src="images/slide03.jpg">
+  <div data-thumb="images\restaurant\Entree\images\caviar_aubergine_thumb.jpg" data-src="images\restaurant\Entree\caviar_aubergine.jpg">
+  <div class="camera_caption fadeIn">
+  </div>
+  </div>
+  <div data-thumb="images/slide02_thumb.jpg" data-src="images\patisserie\Losanges amandes, pistaches ou noix.JPG">
+  <div class="camera_caption fadeIn">
+  </div>
+  </div>
+  <div data-thumb="images/slide02_thumb.jpg" data-src="images\patisserie\Cigare noix de cajous ou amandes.JPG">
+  <div class="camera_caption fadeIn">
+  </div>
+  </div>
+  <div data-thumb="images/slide03_thumb.jpg" data-src="images\patisserie\Baclawa amandes.JPG">
   <div class="camera_caption fadeIn">
   </div>
   </div>
@@ -102,7 +114,10 @@ function get_index_header_menu()
 }
 function get_index_header()
 {
-  echo '<header>'.get_index_header_picture().get_index_header_menu().'</header>';
+  echo '<header>'.
+  get_index_header_picture().
+  get_index_header_menu().
+  '</header>';
 }
 function get_index_main()
 {

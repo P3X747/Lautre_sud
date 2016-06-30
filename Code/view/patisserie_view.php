@@ -4,7 +4,7 @@ class Patisserie_view extends Abstract_view
 {
 
   function __construct() {
-      require_once dirname(__FILE__) . '\..\model\database\patisserie_db.php';
+      require_once dirname(__FILE__) . '\..\model\patisserie_db.php';
       $this->db_model = new Patisserie_db();
       //******
   }

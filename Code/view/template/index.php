@@ -42,7 +42,7 @@
                               FOOTER
     =========================================================-->
     <?php
-      include "display.php";
+      include "../display.php";
       get_index_header();
       get_index_main();
       get_footer();

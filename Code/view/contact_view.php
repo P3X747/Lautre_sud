@@ -5,7 +5,7 @@ class Contact_view
   private $db_model;
 
   function __construct() {
-      require_once dirname(__FILE__) . '\..\model\database\contact_db.php';
+      require_once dirname(__FILE__) . '\..\model\contact_db.php';
       $this->db_model = new Contact_db();
       //******
   }
